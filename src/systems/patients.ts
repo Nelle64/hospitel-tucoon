@@ -31,7 +31,7 @@ function roomTypesBuilt(w: World): Set<string> {
 }
 
 /** Freezes the treatment path for a new case (pharmacy branch, severe branch, emergency route, observation workflow). */
-export function selectPath(w: World, disease: DiseaseId, emergency: boolean): { path: StepKind[]; observation: boolean; severe: boolean; revenueMult: number; materialMult: number; triage: number } {
+export function selectPath(w: World, disease: DiseaseId, emergency: boolean, forceSevere = false): { path: StepKind[]; observation: boolean; severe: boolean; revenueMult: number; materialMult: number; triage: number } {
   const d = DEF.disease[disease];
   const built = roomTypesBuilt(w);
   const erOk = built.has('R09');
@@ -41,7 +41,7 @@ export function selectPath(w: World, disease: DiseaseId, emergency: boolean): { 
   let materialMult = 1;
   let triage = d.triage;
   if (d.pharmacyPath && w.state.rooms.some((r) => r.type === 'R11' && roomInService(w, r))) path = d.pharmacyPath.slice();
-  if (d.severeVariant && w.state.rooms.some((r) => r.type === 'R15' && roomInService(w, r)) && w.rng.chance(d.severeVariant.chance)) {
+  if (d.severeVariant && w.state.rooms.some((r) => r.type === 'R15' && roomInService(w, r)) && (w.rng.chance(d.severeVariant.chance) || forceSevere)) {
     path = d.severeVariant.path.slice();
     severe = true;
     revenueMult = d.severeVariant.revenueMult;
@@ -65,14 +65,14 @@ export function selectPath(w: World, disease: DiseaseId, emergency: boolean): { 
   return { path, observation: false, severe, revenueMult, materialMult, triage };
 }
 
-export function spawnPatient(w: World, night: boolean, forcedDisease?: DiseaseId): PatientState | null {
+export function spawnPatient(w: World, night: boolean, forcedDisease?: DiseaseId, forceSevere = false): PatientState | null {
   const disease = forcedDisease ?? chooseDisease(w, night);
   if (!disease) return null;
   const d = DEF.disease[disease];
   const erBuilt = w.state.rooms.some((r) => r.type === 'R09' && !r.closing);
   if (night && !erBuilt) return null;
   const emergency = night || (erBuilt && (d.path[0] === 'E' || (d.triage >= 3 && w.rng.chance(DEF.sim.dayAmbulanceShare))));
-  const sel = selectPath(w, disease, emergency);
+  const sel = selectPath(w, disease, emergency, forceSevere);
   const pid = w.nextId('patient');
   const cid = w.nextId('case');
   const variation = w.rng.range(-0.05, 0.05);

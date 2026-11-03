@@ -399,7 +399,7 @@ export function completeDue(w: World): PatientState[] {
     for (const s of team) {
       for (const k of sd.qualitySkills) s.skills[k] = Math.min(100, (s.skills[k] ?? 0) + 0.06);
     }
-    w.emit('TREATMENT_COMPLETED', { reservationId: res.id, patientId: res.patientId, roomId: res.roomId, step: res.step, quality: Math.round(res.quality) }, `patient:${res.patientId}`);
+    w.emit('TREATMENT_COMPLETED', { reservationId: res.id, patientId: res.patientId, caseId: res.caseId, roomId: res.roomId, roomType: room?.type ?? null, step: res.step, quality: Math.round(res.quality), staffRoles: team.map((t) => t.role), disease: c?.disease ?? null }, `patient:${res.patientId}`);
     releaseReservation(w, res);
     if (p) {
       p.state = 'NEXT_STEP';

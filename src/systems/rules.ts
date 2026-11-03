@@ -96,7 +96,7 @@ export function isScheduledOpen(w: World, type: RoomTypeId): boolean {
   if (w.isDayShift) return true;
   if (DEF.room[type].hours !== 'allDay') return false;
   if (DEF.room[type].team.length === 0) return true;
-  const key = `night:${type}:${Math.floor(w.tick / 50)}`;
+  const key = `night:${type}:${w.tick}`;
   const cached = w.caches[key];
   if (cached !== undefined) return cached as boolean;
   const staffed = w.state.rooms.some((r) => r.type === type && !r.closing && w.state.staff.some((s) => s.roomId === r.id && s.shift === 'night'));

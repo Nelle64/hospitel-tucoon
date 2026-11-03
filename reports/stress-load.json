@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-11-03T18:06:26.450Z",
+  "mode": "load",
+  "seeds": 20,
+  "days": 1000,
+  "wallSeconds": 5,
+  "totalViolations": 0,
+  "results": [
+    {
+      "kind": "load",
+      "seed": 4242,
+      "days": 10,
+      "violations": [],
+      "maxQueue": 158,
+      "maxReservations": 37,
+      "maxPatients": 0,
+      "maxLog": 0,
+      "maxSaveKB": 0,
+      "finalSaveKB": 1247,
+      "roundTrips": 0,
+      "closures": 0,
+      "absences": 0,
+      "won": false,
+      "ms": 5115,
+      "peak": {
+        "patients": 165,
+        "staff": 62,
+        "rooms": 57
+      }
+    }
+  ]
+}

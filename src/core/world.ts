@@ -22,8 +22,6 @@ export class World {
   /** Events emitted during the current tick/command, flushed to listeners afterwards. */
   private outbox: DomainEvent[] = [];
   private listeners = new Set<EventListener>();
-  /** Dirty flag for the matching phase. */
-  matchDirty = true;
   /** Free-form derived caches owned by systems (e.g. navigation). */
   caches: Record<string, unknown> = {};
 
@@ -41,7 +39,14 @@ export class World {
     this.resById = new Map(this.state.reservations.map((r) => [r.id, r]));
     this.grid.rebuild(this.state);
     this.caches = {};
-    this.matchDirty = true;
+  }
+
+  /** Dirty flag for the matching phase (part of GameState so reloads stay deterministic). */
+  get matchDirty(): boolean {
+    return this.state.clock.matchDirty;
+  }
+  set matchDirty(v: boolean) {
+    this.state.clock.matchDirty = v;
   }
 
   get tick(): number {

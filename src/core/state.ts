@@ -444,7 +444,7 @@ export type DomainEventType =
   // Additional events used by UI/audio feedback.
   | 'ROOM_BUILD_FAILED' | 'STAFF_FIRED' | 'PATIENT_LEFT' | 'MISSION_STARTED' | 'MISSION_FAILED' | 'LOAN_TAKEN'
   | 'RESEARCH_STARTED' | 'EMERGENCY_ESCALATED' | 'ECONOMY_WARNING' | 'INSPECTION_STARTED' | 'INSPECTION_DAY' | 'INSPECTION_FAILED'
-  | 'LAND_EXPANDED' | 'CORRIDOR_BUILT' | 'DOOR_MOVED' | 'TRAINING_STARTED' | 'BLUEPRINT_BUILT' | 'RECONSTRUCTION' | 'SHIFT_CHANGE' | 'DAY_ENDED';
+  | 'LAND_EXPANDED' | 'CORRIDOR_BUILT' | 'DOOR_MOVED' | 'TRAINING_STARTED' | 'ROOM_CLEANED' | 'STAFF_RESTED' | 'BLUEPRINT_BUILT' | 'RECONSTRUCTION' | 'SHIFT_CHANGE' | 'DAY_ENDED';
 
 export interface BlueprintItem {
   id: number;
@@ -463,7 +463,7 @@ export interface GameState {
   campaign: { id: string; seed: number; name: string };
   ids: Record<string, number>;
   rng: RngState;
-  clock: { tick: number; speed: number; paused: boolean };
+  clock: { tick: number; speed: number; paused: boolean; matchDirty: boolean };
   map: { corridors: number[]; entrance: number; version: number; trafficLevel: number[]; trafficCount: number[]; trafficVersion: number };
   blueprint: { items: BlueprintItem[] };
   rooms: RoomState[];

@@ -20,7 +20,7 @@ export function emptyState(seed: number, name = 'Pixel Hospital'): GameState {
     campaign: { id: `c-${seed.toString(16)}-${Date.now().toString(36)}`, seed, name },
     ids: {},
     rng: createRngState(seed),
-    clock: { tick: START_TICK, speed: 1, paused: false },
+    clock: { tick: START_TICK, speed: 1, paused: false, matchDirty: true },
     map: { corridors: [], entrance: idx(31, 63), version: 1, trafficLevel: new Array(MAP_N).fill(0), trafficCount: new Array(MAP_N).fill(0), trafficVersion: 0 },
     blueprint: { items: [] },
     rooms: [], patients: [], cases: [], staff: [], candidates: [], candidatesDay: 0, queues: [], reservations: [],

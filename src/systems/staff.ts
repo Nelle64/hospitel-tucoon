@@ -258,7 +258,7 @@ function freeRestStation(w: World): { room: RoomState; station: number } | null 
 }
 
 function cleaningCoverage(w: World): Set<number> {
-  const key = `clean:${w.state.map.version}:${Math.floor(w.tick / 100)}`;
+  const key = `clean:${w.state.map.version}:${w.tick}`;
   const cached = w.caches.cleanKey === key ? (w.caches.clean as Set<number>) : null;
   if (cached) return cached;
   let capacity = 0;
@@ -479,6 +479,7 @@ function decide(w: World, s: StaffState, justArrived: boolean): void {
     case 'rest':
       if (justArrived || (!isMoving(s) && s.state === 'MOVING')) s.state = 'RESTING';
       if (s.energy >= DEF.sim.breakUntil) {
+        if (task.station >= 0) w.emit('STAFF_RESTED', { staffId: s.id, roomId: task.roomId, roomType: w.roomById.get(task.roomId)?.type ?? null }, `staff:${s.id}`);
         s.task = { kind: 'none' };
         s.breakRequested = false;
         s.state = 'IDLE';
@@ -496,6 +497,7 @@ function decide(w: World, s: StaffState, justArrived: boolean): void {
         s.state = 'WORKING';
       }
       if (task.until > 0 && w.tick >= task.until) {
+        w.emit('ROOM_CLEANED', { roomId: room.id, roomType: room.type, before: Math.round(room.cleanliness), staffId: s.id }, `room:${room.id}`);
         room.cleanliness = 100;
         s.task = { kind: 'none' };
         s.state = 'IDLE';
