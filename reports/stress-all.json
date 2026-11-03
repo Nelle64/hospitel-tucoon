@@ -1,11 +1,33 @@
 {
-  "generatedAt": "2026-11-03T18:16:36.507Z",
-  "mode": "long",
+  "generatedAt": "2026-11-03T20:00:17.763Z",
+  "mode": "all",
   "seeds": 20,
   "days": 1000,
-  "wallSeconds": 597,
+  "wallSeconds": 570,
   "totalViolations": 0,
   "results": [
+    {
+      "kind": "load",
+      "seed": 4242,
+      "days": 10,
+      "violations": [],
+      "maxQueue": 158,
+      "maxReservations": 37,
+      "maxPatients": 0,
+      "maxLog": 0,
+      "maxSaveKB": 0,
+      "finalSaveKB": 1247,
+      "roundTrips": 0,
+      "closures": 0,
+      "absences": 0,
+      "won": false,
+      "ms": 7514,
+      "peak": {
+        "patients": 165,
+        "staff": 62,
+        "rooms": 57
+      }
+    },
     {
       "kind": "long",
       "seed": 109729,
@@ -21,24 +43,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 116280
-    },
-    {
-      "kind": "long",
-      "seed": 319187,
-      "days": 1000,
-      "violations": [],
-      "maxQueue": 26,
-      "maxReservations": 28,
-      "maxPatients": 39,
-      "maxLog": 300,
-      "maxSaveKB": 1740,
-      "finalSaveKB": 1680,
-      "roundTrips": 143,
-      "closures": 143,
-      "absences": 141,
-      "won": true,
-      "ms": 125228
+      "ms": 111378
     },
     {
       "kind": "long",
@@ -55,7 +60,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 125860
+      "ms": 118867
     },
     {
       "kind": "long",
@@ -72,24 +77,24 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 126464
+      "ms": 120099
     },
     {
       "kind": "long",
-      "seed": 633374,
+      "seed": 319187,
       "days": 1000,
       "violations": [],
-      "maxQueue": 29,
-      "maxReservations": 25,
-      "maxPatients": 38,
+      "maxQueue": 26,
+      "maxReservations": 28,
+      "maxPatients": 39,
       "maxLog": 300,
-      "maxSaveKB": 1726,
-      "finalSaveKB": 1649,
+      "maxSaveKB": 1740,
+      "finalSaveKB": 1680,
       "roundTrips": 143,
       "closures": 143,
-      "absences": 140,
-      "won": false,
-      "ms": 105057
+      "absences": 141,
+      "won": true,
+      "ms": 114175
     },
     {
       "kind": "long",
@@ -106,7 +111,24 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 117432
+      "ms": 107931
+    },
+    {
+      "kind": "long",
+      "seed": 633374,
+      "days": 1000,
+      "violations": [],
+      "maxQueue": 29,
+      "maxReservations": 25,
+      "maxPatients": 38,
+      "maxLog": 300,
+      "maxSaveKB": 1726,
+      "finalSaveKB": 1649,
+      "roundTrips": 143,
+      "closures": 143,
+      "absences": 140,
+      "won": false,
+      "ms": 99595
     },
     {
       "kind": "long",
@@ -123,7 +145,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 116595
+      "ms": 109778
     },
     {
       "kind": "long",
@@ -140,7 +162,7 @@
       "closures": 143,
       "absences": 140,
       "won": false,
-      "ms": 116176
+      "ms": 110413
     },
     {
       "kind": "long",
@@ -157,7 +179,7 @@
       "closures": 143,
       "absences": 141,
       "won": false,
-      "ms": 104321
+      "ms": 102233
     },
     {
       "kind": "long",
@@ -174,7 +196,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 112168
+      "ms": 112057
     },
     {
       "kind": "long",
@@ -191,7 +213,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 107910
+      "ms": 104306
     },
     {
       "kind": "long",
@@ -208,7 +230,7 @@
       "closures": 143,
       "absences": 141,
       "won": false,
-      "ms": 121922
+      "ms": 120326
     },
     {
       "kind": "long",
@@ -225,24 +247,7 @@
       "closures": 143,
       "absences": 140,
       "won": false,
-      "ms": 116042
-    },
-    {
-      "kind": "long",
-      "seed": 1366477,
-      "days": 1000,
-      "violations": [],
-      "maxQueue": 29,
-      "maxReservations": 28,
-      "maxPatients": 41,
-      "maxLog": 300,
-      "maxSaveKB": 1733,
-      "finalSaveKB": 1675,
-      "roundTrips": 143,
-      "closures": 143,
-      "absences": 141,
-      "won": false,
-      "ms": 113276
+      "ms": 112851
     },
     {
       "kind": "long",
@@ -259,7 +264,24 @@
       "closures": 143,
       "absences": 141,
       "won": false,
-      "ms": 108525
+      "ms": 108572
+    },
+    {
+      "kind": "long",
+      "seed": 1366477,
+      "days": 1000,
+      "violations": [],
+      "maxQueue": 29,
+      "maxReservations": 28,
+      "maxPatients": 41,
+      "maxLog": 300,
+      "maxSaveKB": 1733,
+      "finalSaveKB": 1675,
+      "roundTrips": 143,
+      "closures": 143,
+      "absences": 141,
+      "won": false,
+      "ms": 115639
     },
     {
       "kind": "long",
@@ -276,24 +298,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 115227
-    },
-    {
-      "kind": "long",
-      "seed": 1890122,
-      "days": 1000,
-      "violations": [],
-      "maxQueue": 31,
-      "maxReservations": 25,
-      "maxPatients": 41,
-      "maxLog": 300,
-      "maxSaveKB": 1708,
-      "finalSaveKB": 1663,
-      "roundTrips": 143,
-      "closures": 143,
-      "absences": 141,
-      "won": false,
-      "ms": 111183
+      "ms": 114450
     },
     {
       "kind": "long",
@@ -310,7 +315,7 @@
       "closures": 143,
       "absences": 141,
       "won": true,
-      "ms": 116471
+      "ms": 105210
     },
     {
       "kind": "long",
@@ -327,7 +332,24 @@
       "closures": 143,
       "absences": 140,
       "won": false,
-      "ms": 114310
+      "ms": 100336
+    },
+    {
+      "kind": "long",
+      "seed": 1890122,
+      "days": 1000,
+      "violations": [],
+      "maxQueue": 31,
+      "maxReservations": 25,
+      "maxPatients": 41,
+      "maxLog": 300,
+      "maxSaveKB": 1708,
+      "finalSaveKB": 1663,
+      "roundTrips": 143,
+      "closures": 143,
+      "absences": 141,
+      "won": false,
+      "ms": 98402
     },
     {
       "kind": "long",
@@ -344,7 +366,7 @@
       "closures": 143,
       "absences": 140,
       "won": true,
-      "ms": 116064
+      "ms": 101570
     }
   ]
 }

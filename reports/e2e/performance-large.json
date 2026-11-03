@@ -4,10 +4,10 @@
   "patients": 107,
   "staffOnSite": 41,
   "visibleAgents": 89,
-  "simMsPerTick": 0.5,
+  "simMsPerTick": 0.2000000000698492,
   "medianFps": 59.88023952095874,
-  "p95ms": 33.29999999999927,
-  "frames": 451,
+  "p95ms": 16.799999999999272,
+  "frames": 475,
   "target": {
     "fps": 30,
     "p95": 50

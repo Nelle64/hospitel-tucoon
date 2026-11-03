@@ -16,7 +16,8 @@ Live game (GitHub Pages): https://nelle64.github.io/hospitel-tucoon/
 | Balance runs (multi-seed) | `npm run balance` |
 | Long stress suite | `npm run test:stress` |
 | Production build | `npm run build` (base `/hospitel-tucoon/`; `BASE_PATH=/` for local) |
-| Browser e2e (Playwright) | `npm run e2e` |
+| Browser e2e (Playwright) | `npm run e2e` (needs `npm run build`; do not pass `--reporter=line` when you need `reports/playwright.json`) |
+| Acceptance matrix | `npx tsx tools/report/acceptance.ts` (reads reports/*.json → docs/ACCEPTANCE_MATRIX.md) |
 
 ## Architecture rules (non-negotiable)
 - `GameState` (src/core/state.ts) is the single authoritative, serialisable truth. Derived data (grid, indices, path cache) lives in `World` and is rebuilt on load.

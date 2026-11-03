@@ -1,27 +1,29 @@
 # Implementation status
 
-_Last updated: session 1 (2026-11-03)._
+_Last updated: 2026-11-03 (session 1). Branch `claude/pixel-hospital`._
 
 ## Current phase
-Phase 3 → 4 (core simulation implemented headless; tests, bots, art and UI pending).
+Phase 7 (final acceptance). All phases 0–6 are implemented and their acceptance gates pass in automated tests. Remaining: merge to `main`, enable GitHub Pages, verify the live URL, physical iPhone check by the owner.
 
-## Done
-- Scaffold (TS 6 strict, Vite 8, Phaser 4.2, Vitest 5, Playwright 1.63, ESLint), custom PWA build plugin (service worker + precache manifest).
-- GameDefinition: 18 rooms, 14 step kinds, 24 diseases, 9 roles, 12 skills, 12 trainings, 12 research projects, 12 missions, 12 events, 5 chapters; validator (`npm run validate:data`) passes.
-- Core: GameState, seeded xoshiro128** RNG (state saved), World (indices), Grid (edge walls + doors), command union + runtime validation + duplicate-id protection, domain events (300-entry log), invariants checker.
-- Systems: building/corridors/doors/upgrades/demolition/land, deterministic room furnishing (all 18 types, every door position at min size verified), A* navigation with cache + traffic, movement, patients (arrival → registration → steps → outcome → settlement → exit), staff (shifts, wages, energy/stress, breaks, cleaning, research, training, overtime/handover), ResourceManager (queues, 3 queue policies, reservations, timeouts, bed coverage), economy (transactions, accruals, loans, crisis states), research (RP/GRP, identification/mastery, projects, conversion/focus), missions (12 templates), events (12 templates + pressure director), campaign (5 chapters + 7-day final inspection + victory), metrics (daily aggregates, 365 days), tutorial, blueprint (atomic selection), reconstruction.
-- First headless run: 5 days, 0 invariant violations with checks every tick.
+## Done (verified by automated tests)
+- **Phase 0** – scaffold, strict TS, Vite 8, Phaser 4.2, Vitest 5, Playwright 1.63, ESLint, custom PWA plugin, CI (`.github/workflows/ci.yml`, green on GitHub: run 41698999763), Pages deploy workflow, long-run workflow.
+- **Phase 1** – complete GameDefinition (validator passes), GameState, seeded RNG, clock, commands with runtime validation and dedupe, domain events, transactions, invariants.
+- **Phase 2** – map/land/corridors/doors/rooms, deterministic furnishing (all room types, every door position), blueprints (atomic), A* with cache and traffic, movement, camera + touch input.
+- **Phase 3** – demand, registration, triage, shifts, energy/rest, queues/reservations, treatment, outcomes, economy, metrics; starting clinic runs 30 days without invalid state; genuine patient journey test.
+- **Phase 4** – all 24 diseases and 18 rooms functional (144 room + 192 disease checks), research, training, missions, events, pressure director, campaign, crisis/reconstruction, final inspection, victory; skilled bot wins 30/30 seeds (median day 70).
+- **Phase 5** – original asset generator (270 sprites, 19 sounds), renderer, full Swedish UI, dashboard, tutorial, settings, accessibility options, audio.
+- **Phase 6** – IndexedDB generations, verification, crash recovery, migrations, export/import, service worker (offline restart tested), update flow, diagnostics.
+- **Phase 7** – 437 unit/integration tests, campaign tests, 51 e2e tests on 4 viewports, 30-seed × 3-strategy balance, 20 × 1,000-day stress + load case, visual QA screenshots, performance scenarios, reports in `docs/`.
 
 ## Pending
-- Automated unit/integration tests, traceability matrix.
-- Strategy bots + campaign tests + balance calibration.
-- Save system (IndexedDB generations, checksum, migrations, export/import).
-- Asset generator (pixel art, sfx), Phaser renderer, DOM UI, tutorial UI, settings, diagnostics.
-- CI workflows, e2e tests, reports, deployment.
+1. Merge the pull request into `main` (owner action on iPhone, see PR description).
+2. Enable GitHub Pages with source “GitHub Actions” (owner action, see PR description); deploy workflow then publishes; verify the live URL.
+3. Physical iPhone acceptance (`docs/MOBILE_QA.md`).
 
 ## Blockers
-- GitHub Pages must be enabled once by the repository owner (Settings → Pages → Source: GitHub Actions). Instructions will be given when the deploy workflow exists.
+- Pages enablement and merging require the repository owner's approval (cannot be done from the session without explicit permission).
 
-## Next executable steps
-1. Write unit/integration tests for catalogs, RNG, economy, building, navigation, patient journey.
-2. Implement strategy bots and run the campaign headless.
+## Next executable steps (for any future session)
+1. `git checkout claude/pixel-hospital && npm ci && npm run assets && npm test` to verify the workspace.
+2. After merge + Pages enablement: check `https://nelle64.github.io/hospitel-tucoon/` returns 200 and `sw.js` is served; run `BASE_URL=... npx playwright test --grep @smoke` against it if desired.
+3. Regenerate reports after any change: `npx vitest run --project unit --project integration --reporter=json --outputFile=reports/vitest.json`, `npx playwright test`, `npx tsx tools/report/acceptance.ts`.
