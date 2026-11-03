@@ -2,7 +2,7 @@
   "name": "pixel-hospital",
   "version": "1.0.0",
   "private": true,
-  "description": "Pixel Hospital – a mobile-first hospital tycoon PWA",
+  "description": "Pixel Hospital \u2013 a mobile-first hospital tycoon PWA",
   "type": "module",
   "license": "UNLICENSED",
   "engines": {
@@ -23,7 +23,9 @@
     "build": "vite build",
     "preview": "vite preview --port 4173 --strictPort",
     "e2e": "playwright test",
-    "ci": "npm run assets && npm run validate:data && npm run typecheck && npm run lint && npm test && npm run test:campaign && npm run build && npm run e2e"
+    "ci": "npm run assets && npm run validate:data && npm run typecheck && npm run lint && npm test && npm run test:campaign && npm run build && npm run e2e",
+    "prebuild": "npm run assets",
+    "predev": "npm run assets"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

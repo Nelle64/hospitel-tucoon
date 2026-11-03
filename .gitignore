@@ -6,3 +6,5 @@ coverage/
 reports/tmp/
 *.log
 .DS_Store
+public/assets/
+public/icons/

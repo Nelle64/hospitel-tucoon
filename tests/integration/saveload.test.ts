@@ -3,7 +3,6 @@ import { IDBFactory } from 'fake-indexeddb';
 import { describe, expect, it } from 'vitest';
 import { GameEngine } from '../../src/core/engine';
 import { World } from '../../src/core/world';
-import { canonicalJSON } from '../../src/save/canonical';
 import { SaveManager } from '../../src/save/saveManager';
 import { reconcile } from '../../src/save/reconcile';
 import type { SaveEnvelope } from '../../src/save/envelope';
@@ -11,8 +10,9 @@ import { completeChapter } from '../../src/systems/campaign';
 import { startEvent } from '../../src/systems/events';
 import { cmd, firstDiff, logical, newEngine, noViolations, runUntil } from '../helpers';
 
+let dbCounter = 0;
 async function freshManager(): Promise<SaveManager> {
-  return SaveManager.open(`test-${Math.random()}`, new IDBFactory());
+  return SaveManager.open(`test-${++dbCounter}`, new IDBFactory());
 }
 
 function reload(state: GameEngine['state']): GameEngine {
