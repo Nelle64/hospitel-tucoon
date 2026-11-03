@@ -11,6 +11,8 @@ import { loanRemaining, makeInstallments, post } from './economy';
 export function reconstruction(w: World, causation: string | null): { ok: boolean; errorsSv: string[] } {
   const e = w.state.economy;
   if (e.crisis !== 'recovery') return { ok: false, errorsSv: ['Rekonstruktion kräver att sjukhuset är i återhämtningsläge'] };
+  if (e.loans.some((l) => l.kind === 'reconstruction' && loanRemaining(l) > 0)) return { ok: false, errorsSv: ['En rekonstruktion pågår redan – betala av den först'] };
+  if (e.lastReconstructionDay >= 0 && w.day - e.lastReconstructionDay < 20) return { ok: false, errorsSv: ['Rekonstruktion kan bara göras var 20:e dag'] };
   if (w.tick - e.crisisSince < DEF.sim.ticksPerDay / 2 && e.cash > -5000) return { ok: false, errorsSv: ['Försök med andra åtgärder först (minst 12 timmar i återhämtningsläge)'] };
   for (const r of w.state.rooms) {
     while (r.level > 1 && r.upgradeCosts.length) {
@@ -38,6 +40,7 @@ export function reconstruction(w: World, causation: string | null): { ok: boolea
   e.loans.push(loan);
   if (injection > 0) post(w, injection, 'reconstruction', 'Rekonstruktionskapital (lån)', `loan:${loan.id}`);
   e.reconstructions++;
+  e.lastReconstructionDay = w.day;
   w.state.metrics.reputation = Math.max(0, w.state.metrics.reputation - cfg.reputationPenalty);
   w.emit('RECONSTRUCTION', { consolidated, injection, fee, loanId: loan.id }, `loan:${loan.id}`, causation);
   return { ok: true, errorsSv: [] };

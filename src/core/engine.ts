@@ -16,7 +16,7 @@ import { chooseOption, eventsTick } from '../systems/events';
 import { closeDay, sampleMetrics } from '../systems/metrics';
 import { missionDayEnd, missionQuickCheck } from '../systems/missions';
 import { updateTraffic } from '../systems/movement';
-import { goWait, movePatients, refer, refreshWaitingStates, reseatStanding, routeNext, spawnPatient, updatePatientConditions } from '../systems/patients';
+import { callForward, goWait, movePatients, refer, refreshWaitingStates, reseatStanding, routeNext, spawnPatient, updatePatientConditions } from '../systems/patients';
 import { reconstruction } from '../systems/recovery';
 import { activeBookingsForRoom, cancelReservation, completeDue, matchPatients, updateReservations } from '../systems/resources';
 import { roomUpkeep } from '../systems/staff';
@@ -281,7 +281,8 @@ export class GameEngine {
       spawnPatient(w, a.night);
     }
     eventsTick(w);
-    // 5–6. Queue priorities are evaluated during matching; match patients with resources.
+    // 5–6. Queue priorities (call-forward positions) and matching of patients with resources.
+    callForward(w);
     matchPatients(w);
     // 7. Movement, staff behaviour and treatment activation.
     movePatients(w);

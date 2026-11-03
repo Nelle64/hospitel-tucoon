@@ -87,12 +87,13 @@ export function hireStaff(w: World, candidateId: number, shift: 'day' | 'night',
   return { ok: true, errorsSv: [], staffId: s.id };
 }
 
-function maxPerShift(room: RoomState): number {
+/** Staff per shift: one team per station (beds: per stationsPerTeam) plus one reserve team for breaks/training. */
+export function maxPerShift(room: RoomState): number {
   const def = DEF.room[room.type];
   if (def.team.length === 0) return 0;
   const st = room.layout.stations.length;
-  if (def.stationKind === 'bed') return def.team.length * Math.ceil(st / def.stationsPerTeam);
-  return def.team.length * st;
+  if (def.stationKind === 'bed') return def.team.length * (Math.ceil(st / def.stationsPerTeam) + 1);
+  return def.team.length * (st + 1);
 }
 
 export function assignmentError(w: World, s: StaffState, roomId: number): string | null {

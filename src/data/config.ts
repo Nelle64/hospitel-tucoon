@@ -101,8 +101,9 @@ export const SIMULATION: SimulationConfig = {
 };
 
 export const NAVIGATION: NavigationConfig = {
-  patientMinutesPerTile: { slow: 3, normal: 2, fast: 1.5 },
-  staffMinutesPerTile: { normal: 1.8, fast: 1.5 },
+  // Balance revision B-03: 2× the specification's approximate speeds (ratios preserved). See docs/BALANCE_REPORT.md.
+  patientMinutesPerTile: { slow: 1.5, normal: 1.0, fast: 0.75 },
+  staffMinutesPerTile: { normal: 0.9, fast: 0.75 },
   trafficWindowMinutes: 30,
   maxTrafficSlowdown: 0.25,
   trafficRouteWeight: 0.6,

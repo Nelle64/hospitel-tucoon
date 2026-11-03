@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-11-03T17:49:23.212Z",
+  "seeds": 8,
+  "maxDays": 130,
+  "wallSeconds": 23,
+  "summary": {
+    "skilled": {
+      "runs": 8,
+      "wins": 8,
+      "winRate": 100,
+      "winsBy120": 8,
+      "medianVictoryDay": 87,
+      "noReconstruction": 5,
+      "invariantViolations": 0,
+      "avgChapterDays": [
+        7.5,
+        13.6,
+        30.5,
+        34.4
+      ],
+      "reachedChapter": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  },
+  "results": [
+    {
+      "seed": 1000,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 65,
+      "chapterDays": [
+        8,
+        13,
+        29,
+        34
+      ],
+      "days": 65,
+      "minCash": 7994,
+      "reconstructions": 0,
+      "crisisDays": 41,
+      "violations": 0,
+      "inspectionAttempts": 1,
+      "completed": 2443,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 93,
+      "rejectedCommands": 36,
+      "ms": 7080
+    },
+    {
+      "seed": 16838,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 76,
+      "chapterDays": [
+        6,
+        13,
+        27,
+        33
+      ],
+      "days": 76,
+      "minCash": 1996,
+      "reconstructions": 0,
+      "crisisDays": 59.7,
+      "violations": 0,
+      "inspectionAttempts": 2,
+      "completed": 3115,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 92,
+      "rejectedCommands": 0,
+      "ms": 8715
+    },
+    {
+      "seed": 24757,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 78,
+      "chapterDays": [
+        7,
+        14,
+        30,
+        34
+      ],
+      "days": 78,
+      "minCash": -11762,
+      "reconstructions": 0,
+      "crisisDays": 54.1,
+      "violations": 0,
+      "inspectionAttempts": 2,
+      "completed": 3188,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 93,
+      "rejectedCommands": 0,
+      "ms": 9340
+    },
+    {
+      "seed": 8919,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 87,
+      "chapterDays": [
+        7,
+        14,
+        35,
+        35
+      ],
+      "days": 87,
+      "minCash": -19007,
+      "reconstructions": 0,
+      "crisisDays": 59.4,
+      "violations": 0,
+      "inspectionAttempts": 2,
+      "completed": 3594,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 92,
+      "rejectedCommands": 1,
+      "ms": 9918
+    },
+    {
+      "seed": 56433,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 63,
+      "chapterDays": [
+        7,
+        14,
+        32,
+        35
+      ],
+      "days": 63,
+      "minCash": 2248,
+      "reconstructions": 0,
+      "crisisDays": 40.7,
+      "violations": 0,
+      "inspectionAttempts": 2,
+      "completed": 2267,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 94,
+      "rejectedCommands": 0,
+      "ms": 5884
+    },
+    {
+      "seed": 40595,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 89,
+      "chapterDays": [
+        8,
+        14,
+        34,
+        35
+      ],
+      "days": 89,
+      "minCash": -24999,
+      "reconstructions": 1,
+      "crisisDays": 65.4,
+      "violations": 0,
+      "inspectionAttempts": 3,
+      "completed": 3825,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 92,
+      "rejectedCommands": 5,
+      "ms": 9300
+    },
+    {
+      "seed": 32676,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 115,
+      "chapterDays": [
+        10,
+        14,
+        32,
+        36
+      ],
+      "days": 115,
+      "minCash": -28005,
+      "reconstructions": 1,
+      "crisisDays": 90.9,
+      "violations": 0,
+      "inspectionAttempts": 4,
+      "completed": 5233,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 92,
+      "rejectedCommands": 3,
+      "ms": 12630
+    },
+    {
+      "seed": 48514,
+      "strategy": "skilled",
+      "won": true,
+      "victoryDay": 113,
+      "chapterDays": [
+        7,
+        13,
+        25,
+        33
+      ],
+      "days": 113,
+      "minCash": -30249,
+      "reconstructions": 1,
+      "crisisDays": 97.5,
+      "violations": 0,
+      "inspectionAttempts": 4,
+      "completed": 5231,
+      "mastered": 24,
+      "projects": 12,
+      "reputation": 92,
+      "rejectedCommands": 14,
+      "ms": 12641
+    }
+  ]
+}

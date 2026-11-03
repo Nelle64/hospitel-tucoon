@@ -4,7 +4,7 @@ import type { World } from '../core/world';
 import { clamp, onDuty, staffOfRoom } from './rules';
 
 export function addGRP(w: World, amount: number, reason: string): void {
-  if (amount <= 0) return;
+  if (amount <= 0 || w.chapter < 2) return;
   const r = w.state.research;
   const mult = r.projectsDone.includes('F10') ? 1.15 : 1;
   const total = amount * mult + r.grpFrac;

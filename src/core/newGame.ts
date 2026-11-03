@@ -24,7 +24,7 @@ export function emptyState(seed: number, name = 'Pixel Hospital'): GameState {
     map: { corridors: [], entrance: idx(31, 63), version: 1, trafficLevel: new Array(MAP_N).fill(0), trafficCount: new Array(MAP_N).fill(0), trafficVersion: 0 },
     blueprint: { items: [] },
     rooms: [], patients: [], cases: [], staff: [], candidates: [], candidatesDay: 0, queues: [], reservations: [],
-    economy: { cash: DEF.econ.startingCash, transactions: [], totals: {}, loans: [], crisis: 'none', crisisSince: 0, grantsPaid: [], wageAccum: 0, settledCaseIds: [], settlementCount: 0, reconstructions: 0 },
+    economy: { cash: DEF.econ.startingCash, transactions: [], totals: {}, loans: [], crisis: 'none', crisisSince: 0, grantsPaid: [], wageAccum: 0, settledCaseIds: [], settlementCount: 0, reconstructions: 0, lastReconstructionDay: -1 },
     research: { grp: 0, grpFrac: 0, rp: {}, identified: [], mastered: [], observed: [], projectsDone: [], active: null, focus: null, convertedToday: {}, lastSeenDay: {} },
     missions: { active: [], recent: [], cooldowns: {}, lastTemplate: null, completedCount: 0 },
     events: { active: [], recent: [], lastMajorTick: {}, nextMinorTick: 0, nextMajorTick: 0 },

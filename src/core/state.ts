@@ -114,6 +114,8 @@ export interface PatientState extends Mover {
   /** Wait episode start tick for metrics. */
   waitEpisodeStart: number;
   satisfaction: number;
+  /** Room the patient has been called forward to (waits outside its door), 0 = none. */
+  calledTo: number;
 }
 
 export type CaseOutcome = 'SUCCESS' | 'FAILED_TREATMENT' | 'REFERRED' | 'ABANDONED' | 'CRITICAL';
@@ -258,6 +260,7 @@ export interface EconomyState {
   settledCaseIds: number[];
   settlementCount: number;
   reconstructions: number;
+  lastReconstructionDay: number;
 }
 
 export interface ResearchState {

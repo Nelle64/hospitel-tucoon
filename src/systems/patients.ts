@@ -8,7 +8,7 @@ import type { World } from '../core/world';
 import { post } from './economy';
 import { arrived, clearDestination, isMoving, setDestination, stepMover } from './movement';
 import { addGRP, addRP, observeDisease } from './research';
-import { cancelReservation, dequeue, enqueue, occupiedSeats, releaseSeat, roomTypeForStep, seatUsable } from './resources';
+import { cancelReservation, dequeue, enqueue, occupiedSeats, releaseSeat, roomTypeForStep, seatUsable, sortQueue } from './resources';
 import { chooseDisease } from './demand';
 import { clamp, isScheduledOpen, qualityFactor, researchRevenueFactor, roomAccessible, roomInService, roomStatus, successProbability } from './rules';
 
@@ -90,7 +90,7 @@ export function spawnPatient(w: World, night: boolean, forcedDisease?: DiseaseId
     id: pid, caseId: cid, name, visual: hash32('patient', w.state.campaign.seed, pid, w.rng.nextU32()), state: 'ARRIVING', stateSince: w.tick,
     health: w.rng.range(55, 90), patience: w.rng.range(70, 100), triage, walk: d.walk === 'normal' ? (w.rng.chance(0.15) ? 'fast' : 'normal') : d.walk,
     patienceMult: w.rng.range(0.8, 1.3), queueStep: null, enqueuedTick: w.tick, reservationId: 0, seat: null, standTile: -1,
-    arrivedTick: w.tick, emergency: c.emergency, escalated: false, waitMinutes: 0, overnightMinutes: 0, walkMinutes: 0, retry: [], waitEpisodeStart: w.tick, satisfaction: 0,
+    arrivedTick: w.tick, emergency: c.emergency, escalated: false, calledTo: 0, waitMinutes: 0, overnightMinutes: 0, walkMinutes: 0, retry: [], waitEpisodeStart: w.tick, satisfaction: 0,
     pos: w.state.map.entrance, path: [], pathIdx: 0, progress: 0, dest: -1, allowRooms: [], lastProgressTick: w.tick, facing: 'up', navVersion: w.state.map.version,
   };
   w.addCase(c);
@@ -143,6 +143,15 @@ export function goWait(w: World, p: PatientState, step: StepKind): void {
     const sr = w.roomById.get(p.seat.roomId);
     if (sr && !sr.closing) return;
     releaseSeat(p);
+  }
+  if (step === 'REG' && target) {
+    // Registration: queue in line right outside the reception desk.
+    p.standTile = standSpot(w, target, p);
+    if (!setDestination(w, p, p.standTile, [])) {
+      p.standTile = p.pos;
+      clearDestination(p);
+    }
+    return;
   }
   const occ = occupiedSeats(w);
   const tx = target ? target.x : w.state.map.entrance % MAP_W;
@@ -230,14 +239,14 @@ function satisfactionFor(w: World, p: PatientState, c: CaseState, outcome: CaseO
   const q = avgQuality(c);
   let base: number;
   switch (outcome) {
-    case 'SUCCESS': base = 72 + (q - 60) * 0.7; break;
-    case 'FAILED_TREATMENT': base = 30; break;
-    case 'REFERRED': base = c.observation ? 58 : 40; break;
+    case 'SUCCESS': base = 86 + (q - 60) * 0.5; break;
+    case 'FAILED_TREATMENT': base = 45; break;
+    case 'REFERRED': base = c.observation ? 62 : 45; break;
     case 'ABANDONED': base = 8; break;
     case 'CRITICAL': base = 0; break;
   }
-  const waitPenalty = Math.min(40, Math.max(0, p.waitMinutes - 15) / 4);
-  const nightPenalty = Math.min(20, p.overnightMinutes / 40);
+  const waitPenalty = Math.min(30, Math.max(0, p.waitMinutes - 25) / 6);
+  const nightPenalty = Math.min(15, p.overnightMinutes / 60);
   return clamp(base - waitPenalty - nightPenalty, 0, 100);
 }
 
@@ -480,10 +489,59 @@ export function refreshWaitingStates(w: World): void {
   }
 }
 
+/**
+ * Call forward: the first patients in each department queue wait right outside the department door,
+ * so that a freed station is not left idle while a patient walks across the hospital.
+ * This only changes where a patient waits – it is not a reservation.
+ */
+export function callForward(w: World): void {
+  if (w.tick % 10 !== 5) return;
+  const byStep = new Map<StepKind, { p: PatientState; enq: number }[]>();
+  for (const e of w.state.queues) {
+    const p = w.patientById.get(e.patientId);
+    if (!p || p.reservationId || (p.state !== 'WAITING' && p.state !== 'ARRIVING' && p.state !== 'WAITING_FOR_OPENING')) continue;
+    if (e.step === 'REG' || !DEF.step[e.step].patientPresent) continue;
+    let arr = byStep.get(e.step);
+    if (!arr) byStep.set(e.step, (arr = []));
+    arr.push({ p, enq: e.enqueuedTick });
+  }
+  for (const [step, entries] of byStep) {
+    const type = roomTypeForStep(step);
+    const rooms = w.state.rooms.filter((r) => r.type === type && !r.closing && r.open && w.state.staff.some((s) => s.roomId === r.id));
+    if (rooms.length === 0) continue;
+    sortQueue(w, entries, step);
+    // Expected time until each station frees (0 = free now); patients line up at the soonest-free rooms.
+    const slots: { room: RoomState; at: number }[] = [];
+    for (const r of rooms) {
+      for (const st of r.layout.stations) {
+        const res = w.state.reservations.find((x) => x.roomId === r.id && x.station === st.id);
+        const at = !res ? 0 : res.status === 'ACTIVE' ? res.endTick - w.tick : w.minutesToTicks(DEF.step[step].baseMinutes + 15);
+        slots.push({ room: r, at });
+      }
+    }
+    slots.sort((a, b) => a.at - b.at || a.room.id - b.room.id);
+    const n = Math.min(entries.length, slots.length);
+    for (let i = 0; i < n; i++) {
+      const p = entries[i]!.p;
+      const room = slots[i]!.room;
+      if (p.calledTo === room.id) continue;
+      const door = doorOutside(room);
+      const dist = Math.abs((p.pos % MAP_W) - (door % MAP_W)) + Math.abs(Math.floor(p.pos / MAP_W) - Math.floor(door / MAP_W));
+      p.calledTo = room.id;
+      if (dist <= 4) continue;
+      const spot = standSpot(w, room, p);
+      if (setDestination(w, p, spot, [])) {
+        releaseSeat(p);
+        p.standTile = spot;
+      }
+    }
+  }
+}
+
 /** Patients standing in corridors move to a seat when one frees up (hourly sweep). */
 export function reseatStanding(w: World): void {
   for (const p of w.state.patients) {
-    if (p.seat || !p.queueStep || p.reservationId) continue;
+    if (p.seat || !p.queueStep || p.reservationId || p.calledTo) continue;
     if (p.state !== 'WAITING' && p.state !== 'WAITING_FOR_OPENING') continue;
     if (isMoving(p)) continue;
     goWait(w, p, p.queueStep);

@@ -87,8 +87,22 @@ export function staffOfRoom(w: World, roomId: number): StaffState[] {
   return w.state.staff.filter((s) => s.roomId === roomId);
 }
 
+/**
+ * Scheduled service hours for a department type: day-only departments are open 08–20.
+ * Night-capable departments count as scheduled at night only when the hospital staffs a night shift there.
+ * Player closures (SET_ROOM_OPEN false) do NOT change the schedule, so closing rooms cannot hide waiting time.
+ */
 export function isScheduledOpen(w: World, type: RoomTypeId): boolean {
-  return DEF.room[type].hours === 'allDay' || w.isDayShift;
+  if (w.isDayShift) return true;
+  if (DEF.room[type].hours !== 'allDay') return false;
+  if (DEF.room[type].team.length === 0) return true;
+  const key = `night:${type}:${Math.floor(w.tick / 50)}`;
+  const cached = w.caches[key];
+  if (cached !== undefined) return cached as boolean;
+  const staffed = w.state.rooms.some((r) => r.type === type && !r.closing && w.state.staff.some((s) => s.roomId === r.id && s.shift === 'night'));
+  for (const k of Object.keys(w.caches)) if (k.startsWith(`night:${type}:`)) delete w.caches[k];
+  w.caches[key] = staffed;
+  return staffed;
 }
 
 export function roomAccessible(w: World, room: RoomState): boolean {
@@ -119,7 +133,7 @@ export function roomStatus(w: World, room: RoomState): RoomStatus {
   if (room.brokenUntil > w.tick) return { operational: false, reasonSv: 'Ur funktion', teams: 0 };
   if (room.cleanliness < MIN_CLEANLINESS) return { operational: false, reasonSv: 'Behöver städas', teams: 0 };
   if (!roomAccessible(w, room)) return { operational: false, reasonSv: 'Saknar väg till entrén', teams: 0 };
-  if (!isScheduledOpen(w, room.type)) return { operational: false, reasonSv: 'Utanför öppettider', teams: 0 };
+  if (DEF.room[room.type].hours === 'day' && !w.isDayShift) return { operational: false, reasonSv: 'Utanför öppettider', teams: 0 };
   if (def.team.length === 0) return { operational: true, reasonSv: 'I drift', teams: 0 };
   const duty = staffOfRoom(w, room.id).filter((s) => onDuty(w, s));
   const teams = formTeams(room.type, duty).length;
@@ -220,8 +234,9 @@ export function computeTreatment(w: World, room: RoomState, step: StepKind, team
   return { ticks, quality };
 }
 
+/** Probability that a completed course of treatment succeeds, from the case's average quality score. */
 export function successProbability(avgQ: number): number {
-  return clamp((avgQ - 15) / 75, 0.05, 0.985);
+  return clamp((avgQ - 10) / 72, 0.05, 0.985);
 }
 
 export function qualityFactor(avgQ: number): number {

@@ -21,6 +21,7 @@ export function enqueue(w: World, p: PatientState, step: StepKind): void {
   if (p.queueStep) dequeue(w, p);
   w.state.queues.push({ patientId: p.id, step, enqueuedTick: w.tick });
   p.queueStep = step;
+  p.calledTo = 0;
   p.enqueuedTick = w.tick;
   p.waitEpisodeStart = w.tick;
   w.matchDirty = true;
@@ -89,7 +90,16 @@ function estimateMinutes(step: StepKind): number {
   return DEF.step[step].baseMinutes;
 }
 
-function sortQueue(w: World, entries: { p: PatientState; enq: number }[], step: StepKind): void {
+function walkGuess(w: World, p: PatientState, step: StepKind): number {
+  const type = roomTypeForStep(step);
+  const room = w.state.rooms.find((r) => r.type === type);
+  if (!room) return 0;
+  const px = p.pos % 64;
+  const py = Math.floor(p.pos / 64);
+  return (Math.abs(px - room.door.x) + Math.abs(py - room.door.y)) * DEF.nav.patientMinutesPerTile[p.walk];
+}
+
+export function sortQueue(w: World, entries: { p: PatientState; enq: number }[], step: StepKind): void {
   const policy = w.state.policy.queue;
   const now = w.tick;
   entries.sort((a, b) => {
@@ -101,9 +111,9 @@ function sortQueue(w: World, entries: { p: PatientState; enq: number }[], step: 
       const kb = b.p.arrivedTick - (now - b.enq) * 0.5;
       return ka - kb || a.p.id - b.p.id;
     }
-    // Shortest eligible treatment first, aged by waiting time (starvation protection).
-    const ea = estimateMinutes(step) * (a.p.walk === 'slow' ? 1.1 : 1) - ((now - a.enq) * DEF.sim.minutesPerTick) * 0.5;
-    const eb = estimateMinutes(step) * (b.p.walk === 'slow' ? 1.1 : 1) - ((now - b.enq) * DEF.sim.minutesPerTick) * 0.5;
+    // Shortest eligible treatment (incl. walking distance) first, aged by waiting time (starvation protection).
+    const ea = estimateMinutes(step) * (a.p.walk === 'slow' ? 1.1 : 1) + walkGuess(w, a.p, step) - ((now - a.enq) * DEF.sim.minutesPerTick) * 0.5;
+    const eb = estimateMinutes(step) * (b.p.walk === 'slow' ? 1.1 : 1) + walkGuess(w, b.p, step) - ((now - b.enq) * DEF.sim.minutesPerTick) * 0.5;
     return ea - eb || a.enq - b.enq || a.p.id - b.p.id;
   });
 }
@@ -191,6 +201,14 @@ export function matchPatients(w: World): number {
 }
 
 function pickPatient(w: World, eligible: { p: PatientState }[], room: RoomState, target: number): number {
+  // Among the next-in-line patients of the same (highest) triage class, prefer the one already called to this door.
+  const head = eligible[0]?.p.triage;
+  const window = Math.min(eligible.length, 1 + w.state.rooms.filter((r) => r.type === room.type).reduce((s, r) => s + r.layout.stations.length, 0));
+  for (let i = 0; i < window; i++) {
+    const p = eligible[i]!.p;
+    if (p.triage !== head) break;
+    if (p.calledTo === room.id && !retryBlocked(p, room.id, w.tick) && (target < 0 || p.pos === target || findPath(w, p.pos, target, [room.id]) !== null)) return i;
+  }
   for (let i = 0; i < eligible.length; i++) {
     const p = eligible[i]!.p;
     if (retryBlocked(p, room.id, w.tick)) continue;
