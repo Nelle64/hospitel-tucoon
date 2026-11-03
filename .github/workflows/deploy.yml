@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run assets
+      - run: npm run validate:data
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npx vitest run --project unit --project integration
+      - run: npx vitest run --project campaign
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Smoke-test the production build before publishing
+        run: npx playwright test --grep @smoke
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify the live site (HTML, manifest, service worker, assets)
+        run: |
+          set -e
+          URL="https://nelle64.github.io/hospitel-tucoon/"
+          for i in $(seq 1 20); do
+            code=$(curl -s -o /tmp/index.html -w "%{http_code}" "$URL") || true
+            [ "$code" = "200" ] && grep -q "Pixel Hospital" /tmp/index.html && break
+            sleep 15
+          done
+          echo "index: $code"; test "$code" = "200"
+          grep -q "Pixel Hospital" /tmp/index.html
+          curl -sf "${URL}manifest.webmanifest" | grep -q '"start_url": "./"'
+          curl -sf "${URL}sw.js" | grep -q "const PRECACHE = \["
+          curl -sf "${URL}precache-manifest.json" -o /tmp/pre.json
+          for f in $(python3 -c "import json;print(' '.join(json.load(open('/tmp/pre.json'))['files'][1:]))"); do
+            curl -sf -o /dev/null "${URL}${f}" || { echo "missing $f"; exit 1; }
+          done
+          echo "Live site verified: $URL"

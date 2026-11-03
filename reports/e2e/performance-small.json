@@ -1,0 +1,21 @@
+{
+  "scenario": "small: ~8 rooms, ~15 agents",
+  "rooms": 9,
+  "patients": 5,
+  "staffOnSite": 7,
+  "visibleAgents": 10,
+  "simMsPerTick": 0.09999999997671694,
+  "medianFps": 59.88023952095874,
+  "p95ms": 16.700000000000728,
+  "frames": 480,
+  "target": {
+    "fps": 50
+  },
+  "meetsTarget": true,
+  "browser": "chromium",
+  "env": {
+    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6 Mobile/15E148 Safari/604.1",
+    "hw": 4,
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  }
+}

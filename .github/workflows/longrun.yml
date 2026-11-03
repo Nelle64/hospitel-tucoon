@@ -1,0 +1,27 @@
+name: Long-running balance and stress suites
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'
+
+jobs:
+  balance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: 30 seeds × skilled/average/inefficient
+        run: npm run balance -- 30 skilled,average,inefficient 140
+      - name: 20 seeds × 1000 days stability + load case
+        run: npm run test:stress -- all 20 1000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: longrun-${{ github.sha }}
+          path: reports/

@@ -1,0 +1,4981 @@
+{
+ "commit": "7b471aa",
+ "generatedAt": "2026-11-03T20:03:14.686Z",
+ "counts": {
+  "pass": 496,
+  "fail": 0,
+  "notRun": 1
+ },
+ "rows": [
+  {
+   "req": "REQ-DATA-01",
+   "test": "GameDefinition catalogs REQ-DATA-01 validates with no missing references",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DATA-02",
+   "test": "GameDefinition catalogs REQ-DATA-02 has the locked content scope",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DATA-03",
+   "test": "GameDefinition catalogs REQ-DATA-03 room catalogue matches the specification table",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DATA-04",
+   "test": "GameDefinition catalogs REQ-DATA-04 disease catalogue matches revenue/material/triage/path",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DATA-05",
+   "test": "GameDefinition catalogs REQ-DATA-05 research thresholds, start state and project costs",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DATA-06",
+   "test": "GameDefinition catalogs REQ-DATA-06 staff wages and training catalogue",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DATA-07",
+   "test": "GameDefinition catalogs REQ-DATA-07 all player-facing names are Swedish strings",
+   "module": "GameDefinition",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CMD-01",
+   "test": "command dispatcher REQ-CMD-01 rejects malformed payloads with structured errors",
+   "module": "CommandDispatcher",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CMD-02",
+   "test": "command dispatcher REQ-CMD-02 duplicate command ids do not trigger duplicate actions",
+   "module": "CommandDispatcher",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CMD-03",
+   "test": "command dispatcher REQ-CMD-03 failed commands are atomic (no money deducted)",
+   "module": "CommandDispatcher",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CMD-04",
+   "test": "command dispatcher REQ-CMD-04 speed and pause commands",
+   "module": "CommandDispatcher",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-TIME-01",
+   "test": "command dispatcher REQ-TIME-01 accumulator: 10 ticks per real second at 1×, 40 at 4×, frame rate independent",
+   "module": "CommandDispatcher",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-01",
+   "test": "command dispatcher REQ-EVT-01 domain events carry id, type, tick, sequence and causation",
+   "module": "CommandDispatcher",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-01",
+   "test": "economy REQ-ECO-01 money only changes through auditable integer transactions",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-02",
+   "test": "economy REQ-ECO-02 build cost = base + area × per tile; daily op = base + 2 kr × area",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-03",
+   "test": "economy REQ-ECO-03 wages per shift with 15 % night premium",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-04",
+   "test": "economy REQ-ECO-04 loan installments sum exactly to principal + fixed fee",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-05",
+   "test": "economy REQ-ECO-05 at most two ordinary loans; overdue blocks new loans; crisis loan only in crisis",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-06",
+   "test": "economy REQ-ECO-06 repaying a loan costs exactly the remaining amount",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-07",
+   "test": "economy REQ-ECO-07 upgrade costs use the recorded historical build cost",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-08",
+   "test": "economy REQ-ECO-08 demolition refunds 70 % unused / 40 % used / 100 % immediate undo",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-09",
+   "test": "economy REQ-ECO-09 projected-cash crisis states",
+   "module": "EconomySystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R01 Reception: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R02 Väntrum: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R03 Mottagningsrum: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R04 Provtagning: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R05 Behandlingsrum: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R06 Personalrum: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R07 Laboratorium: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R08 Röntgen: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R09 Akutmottagning: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R10 Ortopedi: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R11 Apotek: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R12 Städcentral: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R13 Operationssal: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R14 Vårdavdelning: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R15 Intensivvård: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R16 Forskningslabb: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R17 Experimentell vård: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-LAYOUT",
+   "test": "automatic furnishing REQ-ROOM-LAYOUT R18 Robotklinik: every door position at minimum size yields a reachable layout",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MISC",
+   "test": "automatic furnishing is deterministic",
+   "module": "RoomSystem/furnishing",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-NAV-01",
+   "test": "navigation REQ-NAV-01 A* finds corridor routes from the entrance to a station",
+   "module": "NavigationSystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-NAV-02",
+   "test": "navigation REQ-NAV-02 patients never use other care rooms as shortcuts",
+   "module": "NavigationSystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-NAV-03",
+   "test": "navigation REQ-NAV-03 unreachable target returns null and blocked furniture is avoided",
+   "module": "NavigationSystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-NAV-04",
+   "test": "navigation REQ-NAV-04 path cache is invalidated by geometry changes",
+   "module": "NavigationSystem",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DET-01",
+   "test": "seeded RNG REQ-DET-01 identical seeds give identical sequences",
+   "module": "SimulationClock/RNG",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DET-02",
+   "test": "seeded RNG REQ-DET-02 continues from a saved state",
+   "module": "SimulationClock/RNG",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MISC",
+   "test": "seeded RNG produces values in range and a sane distribution",
+   "module": "SimulationClock/RNG",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MISC",
+   "test": "save envelope canonical JSON sorts keys and is stable",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-ENV-01",
+   "test": "save envelope REQ-SAVE-ENV-01 envelope round-trip verifies checksum and schema",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-12",
+   "test": "save envelope REQ-SAVE-12 invalid imports are rejected (garbage, tampered, wrong format, huge, newer schema)",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-11",
+   "test": "save envelope REQ-SAVE-11 schema migration v0 → v1 runs on a copy",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MISC",
+   "test": "save envelope schema validation rejects broken structures",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-1",
+   "test": "disease D01 Förkylning REQ-DIS-D01-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-2",
+   "test": "disease D01 Förkylning REQ-DIS-D01-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-3",
+   "test": "disease D01 Förkylning REQ-DIS-D01-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-4",
+   "test": "disease D01 Förkylning REQ-DIS-D01-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-5",
+   "test": "disease D01 Förkylning REQ-DIS-D01-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-6",
+   "test": "disease D01 Förkylning REQ-DIS-D01-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-7",
+   "test": "disease D01 Förkylning REQ-DIS-D01-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D01-8",
+   "test": "disease D01 Förkylning REQ-DIS-D01-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-1",
+   "test": "disease D02 Migrän REQ-DIS-D02-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-2",
+   "test": "disease D02 Migrän REQ-DIS-D02-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-3",
+   "test": "disease D02 Migrän REQ-DIS-D02-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-4",
+   "test": "disease D02 Migrän REQ-DIS-D02-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-5",
+   "test": "disease D02 Migrän REQ-DIS-D02-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-6",
+   "test": "disease D02 Migrän REQ-DIS-D02-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-7",
+   "test": "disease D02 Migrän REQ-DIS-D02-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D02-8",
+   "test": "disease D02 Migrän REQ-DIS-D02-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-1",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-2",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-3",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-4",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-5",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-6",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-7",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D03-8",
+   "test": "disease D03 Stukad fot REQ-DIS-D03-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-1",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-2",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-3",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-4",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-5",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-6",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-7",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D04-8",
+   "test": "disease D04 Magsjuka REQ-DIS-D04-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-1",
+   "test": "disease D05 Benbrott REQ-DIS-D05-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-2",
+   "test": "disease D05 Benbrott REQ-DIS-D05-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-3",
+   "test": "disease D05 Benbrott REQ-DIS-D05-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-4",
+   "test": "disease D05 Benbrott REQ-DIS-D05-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-5",
+   "test": "disease D05 Benbrott REQ-DIS-D05-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-6",
+   "test": "disease D05 Benbrott REQ-DIS-D05-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-7",
+   "test": "disease D05 Benbrott REQ-DIS-D05-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D05-8",
+   "test": "disease D05 Benbrott REQ-DIS-D05-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-1",
+   "test": "disease D06 Infektion REQ-DIS-D06-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-2",
+   "test": "disease D06 Infektion REQ-DIS-D06-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-3",
+   "test": "disease D06 Infektion REQ-DIS-D06-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-4",
+   "test": "disease D06 Infektion REQ-DIS-D06-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-5",
+   "test": "disease D06 Infektion REQ-DIS-D06-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-6",
+   "test": "disease D06 Infektion REQ-DIS-D06-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-7",
+   "test": "disease D06 Infektion REQ-DIS-D06-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D06-8",
+   "test": "disease D06 Infektion REQ-DIS-D06-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-1",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-2",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-3",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-4",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-5",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-6",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-7",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D07-8",
+   "test": "disease D07 Blindtarmsinflammation REQ-DIS-D07-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-1",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-2",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-3",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-4",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-5",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-6",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-7",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D08-8",
+   "test": "disease D08 Lunginflammation REQ-DIS-D08-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-1",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-2",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-3",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-4",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-5",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-6",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-7",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D09-8",
+   "test": "disease D09 Kronisk måndag REQ-DIS-D09-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-1",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-2",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-3",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-4",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-5",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-6",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-7",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D10-8",
+   "test": "disease D10 Akut storhetsvansinne REQ-DIS-D10-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-1",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-2",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-3",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-4",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-5",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-6",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-7",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D11-8",
+   "test": "disease D11 Tangentbordsarm REQ-DIS-D11-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-1",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-2",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-3",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-4",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-5",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-6",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-7",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D12-8",
+   "test": "disease D12 Kaffebrist deluxe REQ-DIS-D12-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-1",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-2",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-3",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-4",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-5",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-6",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-7",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D13-8",
+   "test": "disease D13 Presentationitis REQ-DIS-D13-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-1",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-2",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-3",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-4",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-5",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-6",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-7",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D14-8",
+   "test": "disease D14 Hjärnsläpp REQ-DIS-D14-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-1",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-2",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-3",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-4",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-5",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-6",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-7",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D15-8",
+   "test": "disease D15 Kontorsstolsförlamning REQ-DIS-D15-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-1",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-2",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-3",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-4",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-5",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-6",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-7",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D16-8",
+   "test": "disease D16 Överdriven optimism REQ-DIS-D16-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-1",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-2",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-3",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-4",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-5",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-6",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-7",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D17-8",
+   "test": "disease D17 Mötesallergi REQ-DIS-D17-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-1",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-2",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-3",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-4",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-5",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-6",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-7",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D18-8",
+   "test": "disease D18 Akut chefsförvirring REQ-DIS-D18-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-1",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-2",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-3",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-4",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-5",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-6",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-7",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D19-8",
+   "test": "disease D19 Teleportationshicka REQ-DIS-D19-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-1",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-2",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-3",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-4",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-5",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-6",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-7",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D20-8",
+   "test": "disease D20 Spontan genomskinlighet REQ-DIS-D20-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-1",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-2",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-3",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-4",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-5",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-6",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-7",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D21-8",
+   "test": "disease D21 Omvänd gravitation REQ-DIS-D21-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-1",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-2",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-3",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-4",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-5",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-6",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-7",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D22-8",
+   "test": "disease D22 Tidsförskjutning REQ-DIS-D22-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-1",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-2",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-3",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-4",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-5",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-6",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-7",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D23-8",
+   "test": "disease D23 Multipla personlighetskopior REQ-DIS-D23-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-1",
+   "test": "disease D24 Digital feber REQ-DIS-D24-1 chapter availability",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-2",
+   "test": "disease D24 Digital feber REQ-DIS-D24-2 patient generation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-3",
+   "test": "disease D24 Digital feber REQ-DIS-D24-3 triage",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-4",
+   "test": "disease D24 Digital feber REQ-DIS-D24-4 full valid treatment path (arrival to terminal outcome)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-5",
+   "test": "disease D24 Digital feber REQ-DIS-D24-5 resource eligibility (room type and qualified roles per step)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-6",
+   "test": "disease D24 Digital feber REQ-DIS-D24-6 outcome processing: exactly one terminal outcome",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-7",
+   "test": "disease D24 Digital feber REQ-DIS-D24-7 economy: materials consumed per step, single settlement in the correct range",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-D24-8",
+   "test": "disease D24 Digital feber REQ-DIS-D24-8 research progression (disease-specific RP)",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-RES-01",
+   "test": "research rewards REQ-RES-01 first observation gives +20 RP exactly once per campaign; threshold-0 diseases identify on observation",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-OBS-01",
+   "test": "unknown diseases REQ-DIS-OBS-01 unidentified diseases follow the observation workflow and are referred with +8 RP",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DIS-OBS-02",
+   "test": "unknown diseases REQ-DIS-OBS-02 a disease whose department is missing is referred instead of queueing forever",
+   "module": "PatientSystem (24 diseases)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SIM-01",
+   "test": "operational hospital REQ-SIM-01 a genuine patient arrives, registers, is treated, pays exactly once and leaves",
+   "module": "Patient/Staff/Resource systems",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SIM-02",
+   "test": "operational hospital REQ-SIM-02 the starting clinic operates for 30 simulated days without invalid states",
+   "module": "Patient/Staff/Resource systems",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-TIME-02",
+   "test": "operational hospital REQ-TIME-02 day = 2,400 ticks; shifts start at 08:00 and 20:00 and charge wages",
+   "module": "Patient/Staff/Resource systems",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SIM-03",
+   "test": "operational hospital REQ-SIM-03 triage: critical patients are served before lower triage competing for the same resource",
+   "module": "Patient/Staff/Resource systems",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-1",
+   "test": "room R01 Reception REQ-ROOM-R01-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-2",
+   "test": "room R01 Reception REQ-ROOM-R01-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-3",
+   "test": "room R01 Reception REQ-ROOM-R01-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-4",
+   "test": "room R01 Reception REQ-ROOM-R01-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-5",
+   "test": "room R01 Reception REQ-ROOM-R01-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-6",
+   "test": "room R01 Reception REQ-ROOM-R01-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-7",
+   "test": "room R01 Reception REQ-ROOM-R01-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R01-8",
+   "test": "room R01 Reception REQ-ROOM-R01-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-1",
+   "test": "room R02 Väntrum REQ-ROOM-R02-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-2",
+   "test": "room R02 Väntrum REQ-ROOM-R02-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-3",
+   "test": "room R02 Väntrum REQ-ROOM-R02-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-4",
+   "test": "room R02 Väntrum REQ-ROOM-R02-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-5",
+   "test": "room R02 Väntrum REQ-ROOM-R02-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-6",
+   "test": "room R02 Väntrum REQ-ROOM-R02-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-7",
+   "test": "room R02 Väntrum REQ-ROOM-R02-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R02-8",
+   "test": "room R02 Väntrum REQ-ROOM-R02-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-1",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-2",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-3",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-4",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-5",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-6",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-7",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R03-8",
+   "test": "room R03 Mottagningsrum REQ-ROOM-R03-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-1",
+   "test": "room R04 Provtagning REQ-ROOM-R04-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-2",
+   "test": "room R04 Provtagning REQ-ROOM-R04-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-3",
+   "test": "room R04 Provtagning REQ-ROOM-R04-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-4",
+   "test": "room R04 Provtagning REQ-ROOM-R04-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-5",
+   "test": "room R04 Provtagning REQ-ROOM-R04-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-6",
+   "test": "room R04 Provtagning REQ-ROOM-R04-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-7",
+   "test": "room R04 Provtagning REQ-ROOM-R04-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R04-8",
+   "test": "room R04 Provtagning REQ-ROOM-R04-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-1",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-2",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-3",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-4",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-5",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-6",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-7",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R05-8",
+   "test": "room R05 Behandlingsrum REQ-ROOM-R05-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-1",
+   "test": "room R06 Personalrum REQ-ROOM-R06-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-2",
+   "test": "room R06 Personalrum REQ-ROOM-R06-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-3",
+   "test": "room R06 Personalrum REQ-ROOM-R06-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-4",
+   "test": "room R06 Personalrum REQ-ROOM-R06-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-5",
+   "test": "room R06 Personalrum REQ-ROOM-R06-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-6",
+   "test": "room R06 Personalrum REQ-ROOM-R06-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-7",
+   "test": "room R06 Personalrum REQ-ROOM-R06-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R06-8",
+   "test": "room R06 Personalrum REQ-ROOM-R06-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-1",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-2",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-3",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-4",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-5",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-6",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-7",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R07-8",
+   "test": "room R07 Laboratorium REQ-ROOM-R07-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-1",
+   "test": "room R08 Röntgen REQ-ROOM-R08-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-2",
+   "test": "room R08 Röntgen REQ-ROOM-R08-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-3",
+   "test": "room R08 Röntgen REQ-ROOM-R08-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-4",
+   "test": "room R08 Röntgen REQ-ROOM-R08-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-5",
+   "test": "room R08 Röntgen REQ-ROOM-R08-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-6",
+   "test": "room R08 Röntgen REQ-ROOM-R08-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-7",
+   "test": "room R08 Röntgen REQ-ROOM-R08-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R08-8",
+   "test": "room R08 Röntgen REQ-ROOM-R08-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-1",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-2",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-3",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-4",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-5",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-6",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-7",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R09-8",
+   "test": "room R09 Akutmottagning REQ-ROOM-R09-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-1",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-2",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-3",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-4",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-5",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-6",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-7",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R10-8",
+   "test": "room R10 Ortopedi REQ-ROOM-R10-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-1",
+   "test": "room R11 Apotek REQ-ROOM-R11-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-2",
+   "test": "room R11 Apotek REQ-ROOM-R11-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-3",
+   "test": "room R11 Apotek REQ-ROOM-R11-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-4",
+   "test": "room R11 Apotek REQ-ROOM-R11-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-5",
+   "test": "room R11 Apotek REQ-ROOM-R11-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-6",
+   "test": "room R11 Apotek REQ-ROOM-R11-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-7",
+   "test": "room R11 Apotek REQ-ROOM-R11-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R11-8",
+   "test": "room R11 Apotek REQ-ROOM-R11-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-1",
+   "test": "room R12 Städcentral REQ-ROOM-R12-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-2",
+   "test": "room R12 Städcentral REQ-ROOM-R12-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-3",
+   "test": "room R12 Städcentral REQ-ROOM-R12-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-4",
+   "test": "room R12 Städcentral REQ-ROOM-R12-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-5",
+   "test": "room R12 Städcentral REQ-ROOM-R12-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-6",
+   "test": "room R12 Städcentral REQ-ROOM-R12-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-7",
+   "test": "room R12 Städcentral REQ-ROOM-R12-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R12-8",
+   "test": "room R12 Städcentral REQ-ROOM-R12-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-1",
+   "test": "room R13 Operationssal REQ-ROOM-R13-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-2",
+   "test": "room R13 Operationssal REQ-ROOM-R13-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-3",
+   "test": "room R13 Operationssal REQ-ROOM-R13-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-4",
+   "test": "room R13 Operationssal REQ-ROOM-R13-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-5",
+   "test": "room R13 Operationssal REQ-ROOM-R13-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-6",
+   "test": "room R13 Operationssal REQ-ROOM-R13-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-7",
+   "test": "room R13 Operationssal REQ-ROOM-R13-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R13-8",
+   "test": "room R13 Operationssal REQ-ROOM-R13-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-1",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-2",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-3",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-4",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-5",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-6",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-7",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R14-8",
+   "test": "room R14 Vårdavdelning REQ-ROOM-R14-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-1",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-2",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-3",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-4",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-5",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-6",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-7",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R15-8",
+   "test": "room R15 Intensivvård REQ-ROOM-R15-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-1",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-2",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-3",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-4",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-5",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-6",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-7",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R16-8",
+   "test": "room R16 Forskningslabb REQ-ROOM-R16-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-1",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-2",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-3",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-4",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-5",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-6",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-7",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R17-8",
+   "test": "room R17 Experimentell vård REQ-ROOM-R17-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-1",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-1 unlock gate",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-2",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-2 minimum placement",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-3",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-3 furnishing and door generation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-4",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-4 correct construction cost and recorded historical cost",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-5",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-5 staff eligibility",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-6",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-6 functional use by the simulation",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-7",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-7 closure, upgrade and demolition",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ROOM-R18-8",
+   "test": "room R18 Robotklinik REQ-ROOM-R18-8 save/load preserves room geometry and layout",
+   "module": "RoomSystem (18 rooms)",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-01",
+   "test": "save system REQ-SAVE-01 normal autosave and REQ-SAVE-02 manual save store verified generations",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-03",
+   "test": "save system REQ-SAVE-03 interrupted write keeps the previous committed generation active",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-04",
+   "test": "save system REQ-SAVE-04 corrupt primary snapshot falls back to the previous valid generation",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MISC",
+   "test": "save system never silently replaces a broken save with a new game",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MISC",
+   "test": "save system an older save request never overwrites a newer committed generation",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-05",
+   "test": "save system REQ-SAVE-05 save during active medical care, REQ-SAVE-06 during training, REQ-SAVE-07 with an active event, REQ-SAVE-08 with loans",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-09",
+   "test": "save system REQ-SAVE-09 save around a chapter transition keeps one-time grants paid once",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-10",
+   "test": "save system REQ-SAVE-10 export/import equivalence",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-SAVE-13",
+   "test": "save system REQ-SAVE-13 100 repeated save/load round-trips are lossless and deterministic",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-DET-03",
+   "test": "save system REQ-DET-03 identical seed and commands produce identical results",
+   "module": "SaveManager",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-STAFF-01",
+   "test": "staff REQ-STAFF-01 staff cannot be assigned to two rooms or work during training",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-STAFF-02",
+   "test": "staff REQ-STAFF-02 unauthorized roles and missing skills are rejected",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-STAFF-03",
+   "test": "staff REQ-STAFF-03 energy drains while working and recovers in the break room; shift wages incl. night premium",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-STAFF-04",
+   "test": "staff REQ-STAFF-04 off-going staff finish active care (no silent abandonment at shift change)",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-RES-02",
+   "test": "research REQ-RES-02 projects respect chapter, prerequisites, GRP cost and complete over time",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-RES-03",
+   "test": "research REQ-RES-03 all 12 projects are completable",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-RES-04",
+   "test": "research REQ-RES-04 GRP→RP conversion: 1:2, max 100 GRP per disease per day, permanent mastery",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E01",
+   "test": "special events REQ-EVT-E01 Kaffemaskinen strejkar: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E02",
+   "test": "special events REQ-EVT-E02 En patient har blivit influencer: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E03",
+   "test": "special events REQ-EVT-E03 Mystiskt kontorsmöte: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E04",
+   "test": "special events REQ-EVT-E04 Städpanik: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E05",
+   "test": "special events REQ-EVT-E05 Kvalitetsinspektion: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E06",
+   "test": "special events REQ-EVT-E06 Influensavåg: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E07",
+   "test": "special events REQ-EVT-E07 Röntgenhaveri: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E08",
+   "test": "special events REQ-EVT-E08 Personalbrist: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E09",
+   "test": "special events REQ-EVT-E09 Oväntad donation: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E10",
+   "test": "special events REQ-EVT-E10 Operationsrusning: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E11",
+   "test": "special events REQ-EVT-E11 Forskningsgenombrott: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-E12",
+   "test": "special events REQ-EVT-E12 Robotarna kräver semester: starts, applies a choice and ends",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-EVT-13",
+   "test": "special events REQ-EVT-13 director: no major events in the tutorial days; pressure postpones major negatives",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MIS-01",
+   "test": "missions REQ-MIS-01 missions come from real metrics, max three active, rewards once",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-MIS-02",
+   "test": "missions REQ-MIS-02 a mission for a missing department is cancelled, never stuck",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-BUILD-01",
+   "test": "construction REQ-BUILD-01 blueprint selection builds atomically or not at all",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-BUILD-02",
+   "test": "construction REQ-BUILD-02 blueprints never affect pathfinding or capacity",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-BUILD-03",
+   "test": "construction REQ-BUILD-03 demolishing a corridor may not disconnect rooms",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-BUILD-04",
+   "test": "construction REQ-BUILD-04 land expansion follows chapter unlocks",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-BUILD-05",
+   "test": "construction REQ-BUILD-05 immediate undo refunds 100 % only before the room is used",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-10",
+   "test": "economy integrity REQ-ECO-10 no free-money loops: build→demolish, upgrade→sell, loan→repay all lose money",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-11",
+   "test": "economy integrity REQ-ECO-11 severe financial scenario is recoverable through recovery actions",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-ECO-12",
+   "test": "economy integrity REQ-ECO-12 chapter grants are paid exactly once",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-TUT-01",
+   "test": "tutorial REQ-TUT-01 tutorial can be skipped/restarted and its reward cannot be claimed twice",
+   "module": "Staff/Research/Event/Mission/Construction/Economy",
+   "method": "automated unit/integration test (Vitest, headless)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CAMP-01",
+   "test": "full campaign (headless, commands only) REQ-CAMP-01 skilled strategy wins from a fresh save (seed 1000) with all five chapter transitions",
+   "module": "CampaignSystem (headless bot)",
+   "method": "headless campaign simulation (Vitest + bot)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest-campaign.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CAMP-01",
+   "test": "full campaign (headless, commands only) REQ-CAMP-01 skilled strategy wins from a fresh save (seed 24757) with all five chapter transitions",
+   "module": "CampaignSystem (headless bot)",
+   "method": "headless campaign simulation (Vitest + bot)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest-campaign.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-CAMP-02",
+   "test": "full campaign (headless, commands only) REQ-CAMP-02 average strategy reaches chapter 5 with recoverable setbacks",
+   "module": "CampaignSystem (headless bot)",
+   "method": "headless campaign simulation (Vitest + bot)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/vitest-campaign.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-UX-01",
+   "test": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets [iphone-320x568]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-02",
+   "test": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally [iphone-320x568]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-01",
+   "test": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets [iphone-375x667]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-02",
+   "test": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally [iphone-375x667]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-01",
+   "test": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets [iphone-390x844]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-02",
+   "test": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally [iphone-390x844]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-01",
+   "test": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets [iphone-430x932]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-UX-02",
+   "test": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally [iphone-430x932]",
+   "module": "Mobile UX",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "PERF",
+   "test": "performance (desktop headless Chromium – NOT a physical iPhone measurement) › PERF small: ~8 rooms, ~15 agents [iphone-390x844]",
+   "module": "Performance",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Desktop headless Chromium (SwiftShader); not a physical iPhone measurement"
+  },
+  {
+   "req": "PERF",
+   "test": "performance (desktop headless Chromium – NOT a physical iPhone measurement) › PERF medium: ~20 rooms, ~60 agents [iphone-390x844]",
+   "module": "Performance",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Desktop headless Chromium (SwiftShader); not a physical iPhone measurement"
+  },
+  {
+   "req": "PERF",
+   "test": "performance (desktop headless Chromium – NOT a physical iPhone measurement) › PERF large: ~40 rooms, ~120 agents [iphone-390x844]",
+   "module": "Performance",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Desktop headless Chromium (SwiftShader); not a physical iPhone measurement"
+  },
+  {
+   "req": "REQ-SAVE-E2E-01",
+   "test": "saving, export/import and offline › REQ-SAVE-E2E-01 manual save, reload, continue resumes paused at the same tick [iphone-390x844]",
+   "module": "Save/PWA/lifecycle",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-SAVE-E2E-02",
+   "test": "saving, export/import and offline › REQ-SAVE-E2E-02 export creates a valid save file; import restores it; invalid files are rejected [iphone-390x844]",
+   "module": "Save/PWA/lifecycle",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-PWA-01",
+   "test": "saving, export/import and offline › REQ-PWA-01 offline restart after the service worker cached the app [iphone-390x844]",
+   "module": "Save/PWA/lifecycle",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-LIFE-01",
+   "test": "saving, export/import and offline › REQ-LIFE-01 backgrounding pauses and saves; returning does not simulate elapsed time; no autoplay audio [iphone-390x844]",
+   "module": "Save/PWA/lifecycle",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke production build loads, starts a campaign and simulates [iphone-320x568]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke manifest, icons and service worker are served under the project base path [iphone-320x568]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke production build loads, starts a campaign and simulates [iphone-375x667]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke manifest, icons and service worker are served under the project base path [iphone-375x667]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke production build loads, starts a campaign and simulates [iphone-390x844]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke manifest, icons and service worker are served under the project base path [iphone-390x844]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke production build loads, starts a campaign and simulates [iphone-430x932]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "@smoke",
+   "test": "@smoke manifest, icons and service worker are served under the project base path [iphone-430x932]",
+   "module": "Production build",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-01",
+   "test": "touch controls › REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects [iphone-320x568]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-02",
+   "test": "touch controls › REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges [iphone-320x568]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-03",
+   "test": "touch controls › REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed [iphone-320x568]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-04",
+   "test": "touch controls › REQ-TOUCH-04 blueprint planning costs nothing and is editable [iphone-320x568]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-05",
+   "test": "touch controls › REQ-TOUCH-05 hiring and assigning staff through the UI [iphone-320x568]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-01",
+   "test": "touch controls › REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects [iphone-375x667]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-02",
+   "test": "touch controls › REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges [iphone-375x667]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-03",
+   "test": "touch controls › REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed [iphone-375x667]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-04",
+   "test": "touch controls › REQ-TOUCH-04 blueprint planning costs nothing and is editable [iphone-375x667]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-05",
+   "test": "touch controls › REQ-TOUCH-05 hiring and assigning staff through the UI [iphone-375x667]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-01",
+   "test": "touch controls › REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects [iphone-390x844]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-02",
+   "test": "touch controls › REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges [iphone-390x844]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-03",
+   "test": "touch controls › REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed [iphone-390x844]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-04",
+   "test": "touch controls › REQ-TOUCH-04 blueprint planning costs nothing and is editable [iphone-390x844]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-05",
+   "test": "touch controls › REQ-TOUCH-05 hiring and assigning staff through the UI [iphone-390x844]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-01",
+   "test": "touch controls › REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects [iphone-430x932]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-02",
+   "test": "touch controls › REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges [iphone-430x932]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-03",
+   "test": "touch controls › REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed [iphone-430x932]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-04",
+   "test": "touch controls › REQ-TOUCH-04 blueprint planning costs nothing and is editable [iphone-430x932]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-TOUCH-05",
+   "test": "touch controls › REQ-TOUCH-05 hiring and assigning staff through the UI [iphone-430x932]",
+   "module": "Touch input/UI",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-1",
+   "test": "visual QA screenshots (actual running game) › VIS-1 initial clinic [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-2",
+   "test": "visual QA screenshots (actual running game) › VIS-2 construction preview [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-3",
+   "test": "visual QA screenshots (actual running game) › VIS-3 large populated hospital [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-4",
+   "test": "visual QA screenshots (actual running game) › VIS-4 blueprint mode [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-5",
+   "test": "visual QA screenshots (actual running game) › VIS-5 staff panel [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-6",
+   "test": "visual QA screenshots (actual running game) › VIS-6 analytics dashboard [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-7",
+   "test": "visual QA screenshots (actual running game) › VIS-7 research screen [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "VIS-8",
+   "test": "visual QA screenshots (actual running game) › VIS-8 campaign victory (reached by playing the final inspection day) [iphone-390x844]",
+   "module": "Visual QA",
+   "method": "browser e2e on production build (Playwright, Chromium, touch emulation)",
+   "status": "pass",
+   "result": "passed",
+   "evidence": "reports/playwright.json, playwright-report/",
+   "limitations": "Emulated iPhone viewport in Chromium; not a physical iPhone"
+  },
+  {
+   "req": "REQ-BAL-01",
+   "test": "Skilled strategy 30 seeds: 30 wins, 30 by day 120, median day 70, 30 without reconstruction",
+   "module": "Campaign balance",
+   "method": "multi-seed headless bot (commands only)",
+   "status": "pass",
+   "result": "{\"wins\":30,\"median\":70}",
+   "evidence": "reports/balance-skilled-average-inefficient.json",
+   "limitations": "Bot behaviour approximates a skilled human"
+  },
+  {
+   "req": "REQ-BAL-02",
+   "test": "average strategy 30 seeds: reached chapter 5 in 30, invariant violations 0",
+   "module": "Campaign balance",
+   "method": "multi-seed headless bot (commands only)",
+   "status": "pass",
+   "result": "wins 0/30",
+   "evidence": "reports/balance-skilled-average-inefficient.json",
+   "limitations": "Non-skilled strategies do not win within 160 days (reputation 90 not reached)"
+  },
+  {
+   "req": "REQ-BAL-02",
+   "test": "inefficient strategy 30 seeds: reached chapter 5 in 27, invariant violations 0",
+   "module": "Campaign balance",
+   "method": "multi-seed headless bot (commands only)",
+   "status": "pass",
+   "result": "wins 0/30",
+   "evidence": "reports/balance-skilled-average-inefficient.json",
+   "limitations": "Non-skilled strategies do not win within 160 days (reputation 90 not reached)"
+  },
+  {
+   "req": "REQ-STAB-01",
+   "test": "20 seeds × 1000 game days with periodic save/load during care, closures and staff absence",
+   "module": "Long-term stability",
+   "method": "headless stress suite",
+   "status": "pass",
+   "result": "violations 0, max queue 41, max save 1755 KB",
+   "evidence": "reports/stress-all.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-STAB-02",
+   "test": "Synthetic load: peak 165 patients, 62 staff, 57 rooms, 10 days",
+   "module": "Long-term stability",
+   "method": "headless stress suite",
+   "status": "pass",
+   "result": "violations 0",
+   "evidence": "reports/stress-all.json",
+   "limitations": ""
+  },
+  {
+   "req": "REQ-IPHONE-01",
+   "test": "Physical iPhone acceptance (owner plays the published build)",
+   "module": "Release",
+   "method": "manual check on a real iPhone",
+   "status": "not-run",
+   "result": "pending owner",
+   "evidence": "docs/MOBILE_QA.md",
+   "limitations": "Cannot be performed from the cloud session"
+  }
+ ]
+}

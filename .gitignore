@@ -1,0 +1,10 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+coverage/
+reports/tmp/
+*.log
+.DS_Store
+public/assets/
+public/icons/

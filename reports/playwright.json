@@ -1,0 +1,4401 @@
+{
+  "config": {
+    "argv": [
+      "/opt/node22/bin/node",
+      "/home/user/hospitel-tucoon/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/home/user/hospitel-tucoon/playwright.config.ts",
+    "rootDir": "/home/user/hospitel-tucoon/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/user/hospitel-tucoon/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "iphone-320x568",
+        "name": "iphone-320x568",
+        "testDir": "/home/user/hospitel-tucoon/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/user/hospitel-tucoon/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "iphone-375x667",
+        "name": "iphone-375x667",
+        "testDir": "/home/user/hospitel-tucoon/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/user/hospitel-tucoon/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "iphone-390x844",
+        "name": "iphone-390x844",
+        "testDir": "/home/user/hospitel-tucoon/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/user/hospitel-tucoon/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "iphone-430x932",
+        "name": "iphone-430x932",
+        "testDir": "/home/user/hospitel-tucoon/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/playwright.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite preview --port 4173 --strictPort",
+      "url": "http://localhost:4173/hospitel-tucoon/",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "mobile.spec.ts",
+      "file": "mobile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-320x568",
+              "projectName": "iphone-320x568",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1149,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:30.961Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-4591242f2697647c1052",
+          "file": "mobile.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-320x568",
+              "projectName": "iphone-320x568",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2397,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:32.458Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-c8ea5eee46dccb1f042e",
+          "file": "mobile.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-375x667",
+              "projectName": "iphone-375x667",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1100,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:47.699Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-1da486942cc4321d1942",
+          "file": "mobile.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-375x667",
+              "projectName": "iphone-375x667",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2141,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:48.914Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-fd3ed8c1613f6a6412b6",
+          "file": "mobile.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-390x844",
+              "projectName": "iphone-390x844",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1015,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:01:03.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-002c3906a6bcadf6b850",
+          "file": "mobile.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-390x844",
+              "projectName": "iphone-390x844",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2524,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:01:04.966Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-19609f1b392a54a06eb2",
+          "file": "mobile.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-01 portrait layout: map ≥ 55 % of the viewport, no horizontal overflow, readable text, 44 px targets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-430x932",
+              "projectName": "iphone-430x932",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1178,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:02:50.932Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-4cfadf507e1bf320697b",
+          "file": "mobile.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "REQ-UX-02 bottom sheets open for every navigation section and never clip horizontally",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-430x932",
+              "projectName": "iphone-430x932",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2832,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:02:52.229Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e79c838550b25e92508e-d6731616788d38c4b8c0",
+          "file": "mobile.spec.ts",
+          "line": 30,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "performance.spec.ts",
+      "file": "performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "performance (desktop headless Chromium – NOT a physical iPhone measurement)",
+          "file": "performance.spec.ts",
+          "line": 31,
+          "column": 6,
+          "specs": [
+            {
+              "title": "PERF small: ~8 rooms, ~15 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.906Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-cd7772aeb34514d5fa77",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF medium: ~20 rooms, ~60 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.914Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-72125f98b7ce5cd270a6",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF large: ~40 rooms, ~120 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.921Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-97382abc524dada187ea",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF small: ~8 rooms, ~15 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.106Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-485ad1dcf54aa1bc357b",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF medium: ~20 rooms, ~60 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.119Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-bd383a16e1edcf5fd0a8",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF large: ~40 rooms, ~120 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.126Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-f36fc5a94450aecec8dc",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF small: ~8 rooms, ~15 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12407,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:07.536Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-95b6924487d642648962",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF medium: ~20 rooms, ~60 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:19.956Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-da4d9eb87ade1bbc152f",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF large: ~40 rooms, ~120 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14401,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:32.916Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-cde080b6e91435e55683",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF small: ~8 rooms, ~15 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.120Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-4e549ee70ce6e134de76",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF medium: ~20 rooms, ~60 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.129Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-4a6d32f0e2bc68486cec",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "PERF large: ~40 rooms, ~120 agents",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                        "line": 32,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.139Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/performance.spec.ts",
+                            "line": 32,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-f47e24224e5fa2e1f5af",
+              "file": "performance.spec.ts",
+              "line": 35,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "persistence.spec.ts",
+      "file": "persistence.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "saving, export/import and offline",
+          "file": "persistence.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "REQ-SAVE-E2E-01 manual save, reload, continue resumes paused at the same tick",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.936Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-85d779ec9d68c841fab2",
+              "file": "persistence.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-02 export creates a valid save file; import restores it; invalid files are rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.943Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-5ed8efb31e5eafb96c39",
+              "file": "persistence.spec.ts",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "REQ-PWA-01 offline restart after the service worker cached the app",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.951Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-bc3e9eed9af5e5d8d7c5",
+              "file": "persistence.spec.ts",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "REQ-LIFE-01 backgrounding pauses and saves; returning does not simulate elapsed time; no autoplay audio",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:34.958Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-d0b4d86371a967c99fcb",
+              "file": "persistence.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-01 manual save, reload, continue resumes paused at the same tick",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.141Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-930801933cfc9939871b",
+              "file": "persistence.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-02 export creates a valid save file; import restores it; invalid files are rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.148Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-8fcb12be68795956193b",
+              "file": "persistence.spec.ts",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "REQ-PWA-01 offline restart after the service worker cached the app",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.156Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-49e4cd40ed605d6cc06b",
+              "file": "persistence.spec.ts",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "REQ-LIFE-01 backgrounding pauses and saves; returning does not simulate elapsed time; no autoplay audio",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:51.163Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-366757bfaf8fd7acfcb4",
+              "file": "persistence.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-01 manual save, reload, continue resumes paused at the same tick",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4914,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:47.336Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-5be0af4f8ffbed74b5b6",
+              "file": "persistence.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-02 export creates a valid save file; import restores it; invalid files are rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3441,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:52.265Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-c1afeb91c4c61ab0f5da",
+              "file": "persistence.spec.ts",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "REQ-PWA-01 offline restart after the service worker cached the app",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1898,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:55.717Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-ccb1bc185c3e766b8650",
+              "file": "persistence.spec.ts",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "REQ-LIFE-01 backgrounding pauses and saves; returning does not simulate elapsed time; no autoplay audio",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4217,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:57.629Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-a12f05ef6f80a151a052",
+              "file": "persistence.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-01 manual save, reload, continue resumes paused at the same tick",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.152Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-25e8ec947bb61bd94768",
+              "file": "persistence.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "REQ-SAVE-E2E-02 export creates a valid save file; import restores it; invalid files are rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.160Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-45d72b1d59e5b54f6d95",
+              "file": "persistence.spec.ts",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "REQ-PWA-01 offline restart after the service worker cached the app",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.168Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-09268494861ab8c34342",
+              "file": "persistence.spec.ts",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "REQ-LIFE-01 backgrounding pauses and saves; returning does not simulate elapsed time; no autoplay audio",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "runs once (390×844)",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:55.176Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "runs once (390×844)",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/persistence.spec.ts",
+                            "line": 6,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a5ef73a4e2a1baaea746-8daed643f5b10e39bb03",
+              "file": "persistence.spec.ts",
+              "line": 90,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "smoke.spec.ts",
+      "file": "smoke.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@smoke production build loads, starts a campaign and simulates",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-320x568",
+              "projectName": "iphone-320x568",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3418,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:34.970Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-6703da6f5436b134624b",
+          "file": "smoke.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "@smoke manifest, icons and service worker are served under the project base path",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-320x568",
+              "projectName": "iphone-320x568",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:38.397Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-a11315feb02fdce266c4",
+          "file": "smoke.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "@smoke production build loads, starts a campaign and simulates",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-375x667",
+              "projectName": "iphone-375x667",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3403,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:51.174Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-9834ef9c21fe91670156",
+          "file": "smoke.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "@smoke manifest, icons and service worker are served under the project base path",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-375x667",
+              "projectName": "iphone-375x667",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 230,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:00:54.585Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-f7d11631daa587015f96",
+          "file": "smoke.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "@smoke production build loads, starts a campaign and simulates",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-390x844",
+              "projectName": "iphone-390x844",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3563,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:02:01.867Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-0b664eed223a4c76f317",
+          "file": "smoke.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "@smoke manifest, icons and service worker are served under the project base path",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-390x844",
+              "projectName": "iphone-390x844",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 224,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:02:05.444Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-16393a48a75e26a082ea",
+          "file": "smoke.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "@smoke production build loads, starts a campaign and simulates",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-430x932",
+              "projectName": "iphone-430x932",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:02:55.189Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-3a340685f5fd53ff6d5c",
+          "file": "smoke.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "@smoke manifest, icons and service worker are served under the project base path",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iphone-430x932",
+              "projectName": "iphone-430x932",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 226,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:02:58.797Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-818143f3869130403390",
+          "file": "smoke.spec.ts",
+          "line": 22,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "touch.spec.ts",
+      "file": "touch.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "touch controls",
+          "file": "touch.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2037,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:38.640Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-e53478a93fcc8b745ef5",
+              "file": "touch.spec.ts",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2347,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:40.685Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-a0fb5c4af6dc2f905fd6",
+              "file": "touch.spec.ts",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1189,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:43.044Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-470e523fa95e235025f5",
+              "file": "touch.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-04 blueprint planning costs nothing and is editable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1700,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:44.247Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-f1c8fa11b6136585b3e8",
+              "file": "touch.spec.ts",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-05 hiring and assigning staff through the UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1171,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:45.958Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-3356a45e7dad3fc234b4",
+              "file": "touch.spec.ts",
+              "line": 116,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2193,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:54.833Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-e9adb9d4827b4e95f4ce",
+              "file": "touch.spec.ts",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2366,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:57.035Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-4cf0c5ebd019d8538ad5",
+              "file": "touch.spec.ts",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1106,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:59.411Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-cf086c92a5654d3988ec",
+              "file": "touch.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-04 blueprint planning costs nothing and is editable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1543,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:00.526Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-ae240dc9fad7d3934d1e",
+              "file": "touch.spec.ts",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-05 hiring and assigning staff through the UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1164,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:02.077Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-7522d75d966eb39dcda3",
+              "file": "touch.spec.ts",
+              "line": 116,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2409,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:05.684Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-0bbbaa0e849fb3ea7576",
+              "file": "touch.spec.ts",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2602,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:08.104Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-8232747adaa221c349fb",
+              "file": "touch.spec.ts",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1302,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:10.719Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-4f892e65218520b53c90",
+              "file": "touch.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-04 blueprint planning costs nothing and is editable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1756,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:12.030Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-daa44c8c24a61726054d",
+              "file": "touch.spec.ts",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-05 hiring and assigning staff through the UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1322,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:13.796Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-730d24d022c179ca9bca",
+              "file": "touch.spec.ts",
+              "line": 116,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-01 one-finger drag pans, pinch zooms, tap selects",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2318,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:59.036Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-fc755138695494ce293a",
+              "file": "touch.spec.ts",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-02 building: drag defines a preview, panning never builds, explicit confirm builds and charges",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2735,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:01.363Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-d2efa1ad93d8d4f17190",
+              "file": "touch.spec.ts",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-03 invalid placement shows a Swedish error and cannot be confirmed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1390,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:04.110Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-2d59b80e557820dcd1bc",
+              "file": "touch.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-04 blueprint planning costs nothing and is editable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2370,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:05.517Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-c99fe03d870297782337",
+              "file": "touch.spec.ts",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "REQ-TOUCH-05 hiring and assigning staff through the UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1571,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:07.899Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1506cf64783f7365f542-97289160ad3c4ce4a9d2",
+              "file": "touch.spec.ts",
+              "line": 116,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "visual.spec.ts",
+      "file": "visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "visual QA screenshots (actual running game)",
+          "file": "visual.spec.ts",
+          "line": 29,
+          "column": 6,
+          "specs": [
+            {
+              "title": "VIS-1 initial clinic",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.150Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-7dd37fa39d58fb8d7846",
+              "file": "visual.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "VIS-2 construction preview",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.166Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-6b9c4af0557255bb77b8",
+              "file": "visual.spec.ts",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "VIS-3 large populated hospital",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.174Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-48fc0e28672e54d2da7a",
+              "file": "visual.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "VIS-4 blueprint mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.181Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-e58fd5ca4e715f86407f",
+              "file": "visual.spec.ts",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "VIS-5 staff panel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.189Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-f9bdfec80f7b79dc875b",
+              "file": "visual.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "VIS-6 analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.198Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-8e8b1070ef495ec6f59a",
+              "file": "visual.spec.ts",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "VIS-7 research screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.206Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-0e8d0c2d739736bf690b",
+              "file": "visual.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "VIS-8 campaign victory (reached by playing the final inspection day)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-320x568",
+                  "projectName": "iphone-320x568",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:00:47.214Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-6f84fa852164f2bf67d4",
+              "file": "visual.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "VIS-1 initial clinic",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.256Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-6cf63ea70c079bb041d5",
+              "file": "visual.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "VIS-2 construction preview",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.276Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-68f1b744372517e8e736",
+              "file": "visual.spec.ts",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "VIS-3 large populated hospital",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.283Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-7f517200e20fa61eed16",
+              "file": "visual.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "VIS-4 blueprint mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.292Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-a31a5cdcb6c8c59ad75f",
+              "file": "visual.spec.ts",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "VIS-5 staff panel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.299Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-5e0701b0a245ad4e99f3",
+              "file": "visual.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "VIS-6 analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.308Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-27303e72810807d3b491",
+              "file": "visual.spec.ts",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "VIS-7 research screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.319Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-b79ab369d871be74b9f5",
+              "file": "visual.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "VIS-8 campaign victory (reached by playing the final inspection day)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-375x667",
+                  "projectName": "iphone-375x667",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:01:03.330Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-4f2472c11c60533bb348",
+              "file": "visual.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "VIS-1 initial clinic",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5099,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:15.134Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-8a77c96f83f33f9af1c8",
+              "file": "visual.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "VIS-2 construction preview",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1334,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:20.249Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-b354b7fd09380c7c26cc",
+              "file": "visual.spec.ts",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "VIS-3 large populated hospital",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5117,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:21.621Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-4be57ccc2cb3eb885998",
+              "file": "visual.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "VIS-4 blueprint mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1769,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:26.748Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-9afb669ff4bc28accf11",
+              "file": "visual.spec.ts",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "VIS-5 staff panel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1963,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:28.529Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-22805785a046926abf1e",
+              "file": "visual.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "VIS-6 analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3152,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:30.503Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-5c34151019a07dbec88e",
+              "file": "visual.spec.ts",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "VIS-7 research screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2054,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:33.664Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-a1f8952919f6a2d689a6",
+              "file": "visual.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "VIS-8 campaign victory (reached by playing the final inspection day)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iphone-390x844",
+                  "projectName": "iphone-390x844",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14553,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:02:35.730Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-126b0b44c0d626de0403",
+              "file": "visual.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "VIS-1 initial clinic",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.500Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-237a44c05beadaf9c812",
+              "file": "visual.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "VIS-2 construction preview",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.518Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-6b7cfa4130c677ba4ff3",
+              "file": "visual.spec.ts",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "VIS-3 large populated hospital",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.531Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-1f8d77503ac3c3da4320",
+              "file": "visual.spec.ts",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "VIS-4 blueprint mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.540Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-18cab4c759bc3ab6f279",
+              "file": "visual.spec.ts",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "VIS-5 staff panel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.550Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-1e39345da8df04727698",
+              "file": "visual.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "VIS-6 analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.557Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-79c44f3b8a3f0e584211",
+              "file": "visual.spec.ts",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "VIS-7 research screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.566Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-92cf04c60cbc31957515",
+              "file": "visual.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "VIS-8 campaign victory (reached by playing the final inspection day)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "screenshots at 390×844",
+                      "location": {
+                        "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                        "line": 30,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "iphone-430x932",
+                  "projectName": "iphone-430x932",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T20:03:09.576Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "screenshots at 390×844",
+                          "location": {
+                            "file": "/home/user/hospitel-tucoon/tests/e2e/visual.spec.ts",
+                            "line": 30,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "8324bb52c49185e48ff4-98338470ce2349835c88",
+              "file": "visual.spec.ts",
+              "line": 108,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-03T20:00:29.047Z",
+    "duration": 160633.07,
+    "expected": 51,
+    "skipped": 45,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
