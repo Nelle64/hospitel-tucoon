@@ -61,7 +61,7 @@ export class HospitalScene extends Phaser.Scene {
     this.preview = this.add.graphics().setDepth(200000);
     this.selectRing = this.add.image(0, 0, 'fx', 'select').setDepth(9).setVisible(false);
     const cam = this.cameras.main;
-    cam.setBounds(-WORLD * 0.25, -WORLD * 0.25, WORLD * 1.5, WORLD * 1.5);
+    cam.setBounds(-T * 2, -T * 2, WORLD + T * 4, WORLD + T * 3);
     cam.setBackgroundColor('#2c4a2b');
     cam.roundPixels = true;
     this.app.onSceneReady(this);

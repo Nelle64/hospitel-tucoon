@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate original pixel art and audio
+        run: npm run assets
+      - name: Validate game data
+        run: npm run validate:data
+      - run: npm run typecheck
+      - run: npm run lint
+      - name: Unit + integration tests
+        run: npx vitest run --project unit --project integration --reporter=default --reporter=json --outputFile=reports/vitest.json
+      - name: Headless campaign tests
+        run: npx vitest run --project campaign --reporter=default --reporter=json --outputFile=reports/vitest-campaign.json
+      - name: Production build
+        run: npm run build
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Browser smoke + mobile e2e tests (production build)
+        run: npx playwright test
+      - name: Upload verification artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ github.sha }}
+          path: |
+            reports/
+            playwright-report/
+            test-results/
+            docs/images/
+          retention-days: 30

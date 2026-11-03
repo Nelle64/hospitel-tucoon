@@ -45,7 +45,7 @@ small { font-size: 0.8rem; }
 .btn.big small { display: block; font-size: 0.78rem; color: var(--ink2); font-weight: 400; }
 
 /* Layout */
-.game-root { display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; height: 100%; }
+.game-root { display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; grid-template-columns: minmax(0, 1fr); height: 100%; width: 100%; overflow: hidden; }
 .hud { padding: calc(var(--st) + 4px) calc(var(--sr) + 10px) 4px calc(var(--sl) + 10px); background: linear-gradient(#1b2232, #161c29); border-bottom: 2px solid #0c0f17; z-index: 3; }
 .hud-row { display: flex; align-items: center; gap: 12px; white-space: nowrap; overflow: hidden; }
 .hud-row > div { display: flex; align-items: center; gap: 4px; }
@@ -159,7 +159,7 @@ select.btn { appearance: none; }
 .pause-badge { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 15; background: rgba(20, 25, 37, 0.92); border: 2px solid var(--warn); border-radius: 22px; padding: 6px 14px; min-height: 44px; display: flex; align-items: center; gap: 6px; color: var(--ink); }
 .tutorial { position: absolute; left: 8px; right: 8px; top: 8px; z-index: 12; background: rgba(30, 36, 51, 0.94); border: 2px solid var(--gold); border-radius: 14px; padding: 6px 10px; font-size: 0.82rem; line-height: 1.3; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45); }
 .tutorial .btn-row { margin: 4px 0 0; }
-.tutorial .btn { min-height: 38px; padding: 4px 12px; }
+.tutorial .btn { min-height: 44px; padding: 4px 12px; }
 .tutorial p { margin: 2px 0; }
 .buildhud { position: absolute; left: 0; right: 0; bottom: 0; z-index: 18; background: var(--panel); border-top: 2px solid var(--line); border-radius: 16px 16px 0 0; padding: 8px calc(var(--sr) + 12px) 4px calc(var(--sl) + 12px); max-height: 46%; overflow-y: auto; }
 .bh-stats { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 0.9rem; }

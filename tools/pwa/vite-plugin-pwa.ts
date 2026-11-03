@@ -34,9 +34,10 @@ export function pwaPlugin(opts: { base: string; version: string }): Plugin {
       const precache = ['', ...files];
       const template = readFileSync(new URL('./sw-template.js', import.meta.url), 'utf8');
       const sw = template
-        .replace('__CACHE_VERSION__', cacheVersion)
-        .replace('__BASE__', opts.base)
-        .replace('__PRECACHE_LIST__', JSON.stringify(precache, null, 0));
+        .split('__CACHE_VERSION__').join(cacheVersion)
+        .split('__BASE__').join(opts.base)
+        .split('__PRECACHE_LIST__').join(JSON.stringify(precache, null, 0));
+      if (/__[A-Z_]+__/.test(sw)) throw new Error('sw.js still contains an unreplaced placeholder');
       writeFileSync(join(outDir, 'sw.js'), sw);
       writeFileSync(join(outDir, 'precache-manifest.json'), JSON.stringify({ cacheVersion, files: precache }, null, 2));
     },

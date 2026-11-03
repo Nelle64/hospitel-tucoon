@@ -20,4 +20,9 @@ export default tseslint.config(
     files: ['src/render/**', 'src/ui/**', 'src/audio/**', 'tools/**', 'tests/e2e/**'],
     rules: { 'no-restricted-properties': 'off' },
   },
+  {
+    // Browser tests reach into the page through untyped evaluate() callbacks.
+    files: ['tests/e2e/**'],
+    rules: { '@typescript-eslint/no-explicit-any': 'off' },
+  },
 );

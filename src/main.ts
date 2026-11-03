@@ -225,18 +225,22 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 window.addEventListener('pagehide', () => void app?.save('pagehide'));
+// Audio may only start after a user gesture: unlock on the first tap anywhere (never autoplay).
+document.addEventListener('pointerdown', () => app?.userGesture(), { capture: true });
 
 // Service worker + safe update flow.
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', async () => {
     try {
       const reg = await navigator.serviceWorker.register(`${BASE}sw.js`, { scope: BASE });
+      let updateRequested = false;
       const offer = (worker: ServiceWorker) => {
         const banner = h('div', { class: 'update-banner' }, h('span', null, 'En ny version av Pixel Hospital finns.'), h('button', { class: 'btn primary small', onclick: async () => {
           if (app) {
             app.setPaused(true);
             await app.save('update');
           }
+          updateRequested = true;
           worker.postMessage({ type: 'SKIP_WAITING' });
         } }, 'Uppdatera'));
         document.body.append(banner);
@@ -250,7 +254,8 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
       });
       let reloading = false;
       navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (reloading) return;
+        // First install claims the page without any reload; only a user-approved update reloads.
+        if (reloading || !updateRequested) return;
         reloading = true;
         location.reload();
       });

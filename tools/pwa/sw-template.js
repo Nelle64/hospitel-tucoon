@@ -1,4 +1,4 @@
-/* global __PRECACHE_LIST__ */
+/* eslint-disable no-undef -- placeholders are substituted at build time */
 /* Pixel Hospital service worker. Generated at build time – do not edit dist/sw.js by hand.
  * Caches only static application files. It never touches IndexedDB (save games). */
 const CACHE_PREFIX = 'pixel-hospital-';
@@ -34,12 +34,12 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
   if (req.mode === 'navigate') {
     event.respondWith(
-      caches.match(BASE + 'index.html', { cacheName: CACHE_NAME }).then((cached) => cached || fetch(req)),
+      caches.match(BASE + 'index.html', { cacheName: CACHE_NAME, ignoreVary: true }).then((cached) => cached || fetch(req)),
     );
     return;
   }
   event.respondWith(
-    caches.match(req, { cacheName: CACHE_NAME, ignoreSearch: true }).then((cached) => {
+    caches.match(req, { cacheName: CACHE_NAME, ignoreSearch: true, ignoreVary: true }).then((cached) => {
       if (cached) return cached;
       return fetch(req).then((res) => {
         if (res.ok && url.pathname.startsWith(BASE)) {
