@@ -80,6 +80,7 @@ export interface BotResult {
 export class Bot {
   private n = 0;
   readonly p: Profile;
+  // Profiles are copied so adaptive strategies can change their own behaviour.
   rejected = 0;
   lastRefreshDay = -1;
   minCash = Infinity;
@@ -89,7 +90,7 @@ export class Bot {
   lastSale = -1e9;
 
   constructor(public eng: GameEngine, public strategy: Strategy) {
-    this.p = PROFILES[strategy];
+    this.p = { ...PROFILES[strategy] };
   }
 
   get w() {
@@ -116,6 +117,7 @@ export class Bot {
     if (s.economy.crisis === 'crisis' || s.economy.crisis === 'recovery') this.crisisTicks += this.p.thinkEvery;
     if (!s.tutorial.done) this.cmd({ type: 'TUTORIAL', action: 'skip' });
     this.handleEvents();
+    if (this.strategy === 'inefficient') this.adaptToLosses();
     if (this.handleCrisis()) return;
     if (this.p.priorities) this.setPriorities();
     this.expandLand();
@@ -145,6 +147,42 @@ export class Bot {
     if (this.w.chapter >= 3 && pr.R09 !== 'high') this.cmd({ type: 'SET_DEPARTMENT_PRIORITY', roomType: 'R09', priority: 'high' });
     if (this.w.chapter >= 4 && pr.R13 !== 'high') this.cmd({ type: 'SET_DEPARTMENT_PRIORITY', roomType: 'R13', priority: 'high' });
   }
+
+  /** Even inefficient players eventually react to a week of losses: drop surplus staff and extra rooms. */
+  private adaptToLosses(): void {
+    const days = lastDays(this.w, 5);
+    if (days.length < 5 || days.some((d) => d.result >= 0)) return;
+    if (this.w.tick - this.lastAdapt < DEF.sim.ticksPerDay * 5) return;
+    this.lastAdapt = this.w.tick;
+    this.p.overhire = 0;
+    this.p.overbuild = 0;
+    for (const room of this.s.rooms) {
+      for (const shift of ['day', 'night'] as const) {
+        const staff = this.s.staff.filter((s) => s.roomId === room.id && s.shift === shift);
+        const need = this.shiftNeed(room, shift);
+        const teams = formTeams(room.type, staff);
+        if (teams.length > need) {
+          const keep = new Set(teams.slice(0, need).flat().map((x) => x.id));
+          for (const x of staff) if (!keep.has(x.id) && x.task.kind !== 'work') this.cmd({ type: 'FIRE_STAFF', staffId: x.id });
+        }
+      }
+    }
+    // Remove redundant rooms beyond what the chapter plan needs (refund + lower running costs).
+    const planned = new Map<RoomTypeId, number>();
+    for (let ch = 1; ch <= this.w.chapter; ch++) for (const [t, n] of PLAN[ch]!) planned.set(t, Math.max(planned.get(t) ?? 0, n));
+    const groups = new Map<RoomTypeId, RoomState[]>();
+    for (const r of this.s.rooms) if (!r.closing) groups.set(r.type, [...(groups.get(r.type) ?? []), r]);
+    for (const [t, rooms] of groups) {
+      const keep = Math.max(planned.get(t) ?? 0, t === 'R02' || t === 'R06' ? 1 : 0);
+      const extra = rooms.sort((a, b) => b.id - a.id).slice(0, Math.max(0, rooms.length - Math.max(keep, 1)));
+      for (const r of extra) {
+        for (const st of this.s.staff.filter((x) => x.roomId === r.id)) this.cmd({ type: 'FIRE_STAFF', staffId: st.id });
+        this.cmd({ type: 'DEMOLISH_ROOM', roomId: r.id, mode: 'whenEmpty' });
+      }
+    }
+    for (const s of this.s.staff.slice()) if (!s.roomId && !s.training) this.cmd({ type: 'FIRE_STAFF', staffId: s.id });
+  }
+  private lastAdapt = -1e9;
 
   private handleCrisis(): boolean {
     const e = this.s.economy;
@@ -504,10 +542,10 @@ export class Bot {
     const e = this.s.economy;
     const fixed = dailyFixedCosts(this.w);
     const loans = activeLoans(this.w);
-    if (e.cash < Math.max(8000, fixed * 2) && totalOverdue(this.w) === 0 && loans.filter((l) => l.kind !== 'crisis').length < 2) {
+    if (e.cash < Math.max(6000, fixed * 0.6) && e.crisis !== 'none' && totalOverdue(this.w) === 0 && loans.filter((l) => l.kind !== 'crisis').length < 2) {
       this.cmd({ type: 'TAKE_LOAN', kind: this.w.chapter >= 2 ? 'investment' : 'short' });
     }
-    if (e.cash > 90000) for (const l of loans) this.cmd({ type: 'REPAY_LOAN', loanId: l.id });
+    if (e.cash > Math.max(60000, fixed * 3)) for (const l of loans) this.cmd({ type: 'REPAY_LOAN', loanId: l.id });
   }
 
   private inspection(): void {

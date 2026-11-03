@@ -100,7 +100,7 @@ export const CHAPTERS: ChapterDef[] = [
   ] },
   { id: 4, titleSv: 'Regionsjukhuset', introSv: 'Operationer, inneliggande vård och intensivvård. Nu är ni ett riktigt sjukhus.', grant: 65000, unlockSummarySv: 'Forskningslabb, experimentell vård, robotklinik, sista markutbyggnaden och sena sjukdomar.', requirements: [
     { id: 'c4-patients', kind: 'completedPatients', target: 800, labelSv: 'Slutför vården för 800 patienter totalt' },
-    { id: 'c4-adv', kind: 'advancedTreatments', target: 30, labelSv: '30 avancerade behandlingar (ortopedi, operation eller IVA)' },
+    { id: 'c4-adv', kind: 'advancedTreatments', target: 30, labelSv: '30 avancerade behandlingar i kapitlet (ortopedi, operation eller IVA)' },
     { id: 'c4-spec', kind: 'specialistDepartments', target: 3, labelSv: '3 olika specialistavdelningar i drift' },
     { id: 'c4-rep', kind: 'reputation', target: 85, labelSv: 'Rykte minst 85' },
     { id: 'c4-cash', kind: 'positiveCashflowDays', target: 5, window: 7, labelSv: 'Positivt kassaflöde minst 5 av de senaste 7 dagarna' },

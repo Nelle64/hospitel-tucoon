@@ -28,7 +28,7 @@ export function emptyState(seed: number, name = 'Pixel Hospital'): GameState {
     research: { grp: 0, grpFrac: 0, rp: {}, identified: [], mastered: [], observed: [], projectsDone: [], active: null, focus: null, convertedToday: {}, lastSeenDay: {} },
     missions: { active: [], recent: [], cooldowns: {}, lastTemplate: null, completedCount: 0 },
     events: { active: [], recent: [], lastMajorTick: {}, nextMinorTick: 0, nextMajorTick: 0 },
-    progress: { chapter: 1, chapterCompletedTick: [], inspection: null, victory: null, continuedAfterVictory: false, landStage: 0 },
+    progress: { chapter: 1, chapterCompletedTick: [], chapterStart: { orthoSurgIcu: 0, diagnosticExams: 0, completed: 0 }, inspection: null, victory: null, continuedAfterVictory: false, landStage: 0 },
     metrics: {
       today: newDayMetrics(0, 1), days: [],
       totals: { arrivals: 0, completed: 0, success: 0, failedTreatment: 0, critical: 0, referrals: 0, abandoned: 0, diagnosticExams: 0, advancedTreatments: 0, orthoSurgIcu: 0, trainingsCompleted: 0, satisfactionSum: 0, satisfactionCount: 0, revenue: 0, result: 0 },

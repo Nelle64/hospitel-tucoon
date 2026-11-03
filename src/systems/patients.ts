@@ -239,7 +239,7 @@ function satisfactionFor(w: World, p: PatientState, c: CaseState, outcome: CaseO
   const q = avgQuality(c);
   let base: number;
   switch (outcome) {
-    case 'SUCCESS': base = 86 + (q - 60) * 0.5; break;
+    case 'SUCCESS': base = 85 + (q - 60) * 0.5; break;
     case 'FAILED_TREATMENT': base = 45; break;
     case 'REFERRED': base = c.observation ? 62 : 45; break;
     case 'ABANDONED': base = 8; break;
@@ -338,7 +338,7 @@ export function closeCase(w: World, p: PatientState, c: CaseState, outcome: Case
 
 export function updateReputation(w: World, satisfaction: number): void {
   const m = w.state.metrics;
-  const weight = 0.02 * (w.state.events.active.some((e) => e.template === 'E02' && !e.ended && e.choice) ? 2.5 : 1);
+  const weight = 0.015 * (w.state.events.active.some((e) => e.template === 'E02' && !e.ended && e.choice) ? 2.5 : 1);
   m.reputation = clamp(m.reputation + (satisfaction - m.reputation) * weight, 0, 100);
 }
 

@@ -198,17 +198,37 @@ export function dailyFixedCosts(w: World): number {
   return wages + ops + loans;
 }
 
-/** Warning / crisis / recovery state machine with hysteresis (evaluated hourly). */
+/** Average daily operating income before fixed costs (revenue − variable costs) over the last 3 complete days. */
+export function recentDailyContribution(w: World): number {
+  const days = w.state.metrics.days.slice(-3);
+  if (days.length === 0) return 0;
+  return days.reduce((s, d) => s + d.revenue - d.variableCosts, 0) / days.length;
+}
+
+/** Cash projected `days` ahead: current cash + expected contribution − fixed costs (wages, rooms, installments). */
+export function projectedCash(w: World, days: number): number {
+  return w.state.economy.cash + days * (recentDailyContribution(w) - dailyFixedCosts(w));
+}
+
+/**
+ * Warning / crisis / recovery state machine with hysteresis (evaluated hourly).
+ * Warning: projected cash cannot cover ~5 days of fixed costs. Crisis: cannot cover 3 days.
+ * Recovery: cash below zero or overdue debt (obligations cannot be met).
+ */
 export function updateCrisis(w: World): void {
   const e = w.state.economy;
   const fixed = Math.max(1, dailyFixedCosts(w));
   const overdue = totalOverdue(w);
   const prev = e.crisis;
+  const p3 = projectedCash(w, DEF.econ.crisisDays);
+  const p5 = projectedCash(w, DEF.econ.warningDays);
+  const margin = fixed * 0.25;
   let next: typeof prev;
   if (e.cash < 0 || overdue > 0) next = 'recovery';
-  else if (e.cash < DEF.econ.crisisDays * fixed) next = prev === 'recovery' && e.cash < DEF.econ.crisisDays * fixed * 1.1 ? 'recovery' : 'crisis';
-  else if (e.cash < DEF.econ.warningDays * fixed) next = (prev === 'crisis' || prev === 'recovery') && e.cash < DEF.econ.crisisDays * fixed * 1.15 ? prev : 'warning';
-  else next = prev !== 'none' && e.cash < DEF.econ.warningDays * fixed * 1.1 ? 'warning' : 'none';
+  else if (p3 < 0) next = 'crisis';
+  else if (p5 < 0) next = prev === 'crisis' && p3 < margin ? 'crisis' : 'warning';
+  else next = prev !== 'none' && p5 < margin ? (prev === 'recovery' ? 'crisis' : prev) : 'none';
+  if (prev === 'recovery' && next !== 'recovery' && p3 < margin) next = 'crisis';
   if (next === prev) return;
   e.crisis = next;
   e.crisisSince = w.tick;

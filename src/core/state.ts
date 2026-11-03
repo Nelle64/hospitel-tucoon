@@ -335,6 +335,8 @@ export interface InspectionDay {
 export interface CampaignProgress {
   chapter: ChapterId;
   chapterCompletedTick: number[];
+  /** Snapshot of lifetime counters when the current chapter started (for chapter-relative requirements). */
+  chapterStart: { orthoSurgIcu: number; diagnosticExams: number; completed: number };
   inspection: { active: boolean; startDay: number; days: InspectionDay[]; attempts: number; lastResult: 'none' | 'failed' | 'passed'; failReasonSv: string } | null;
   victory: { tick: number; day: number } | null;
   continuedAfterVictory: boolean;

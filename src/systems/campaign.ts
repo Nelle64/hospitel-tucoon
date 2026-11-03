@@ -70,7 +70,8 @@ export function evaluateRequirement(w: World, req: RequirementDef): RequirementS
       break;
     }
     case 'advancedTreatments':
-      current = t.orthoSurgIcu;
+      // Counted during the current chapter (unlike the cumulative patient requirement).
+      current = t.orthoSurgIcu - w.state.progress.chapterStart.orthoSurgIcu;
       met = current >= req.target;
       break;
     case 'specialistDepartments':
@@ -124,6 +125,8 @@ export function completeChapter(w: World, chapter: ChapterId): void {
   }
   p.chapterCompletedTick.push(w.tick);
   p.chapter = (chapter + 1) as ChapterId;
+  const tot = w.state.metrics.totals;
+  p.chapterStart = { orthoSurgIcu: tot.orthoSurgIcu, diagnosticExams: tot.diagnosticExams, completed: tot.completed };
   // Newly eligible diseases start their rarity clock now.
   for (const d of Object.values(DEF.disease)) if (d.chapter <= p.chapter && w.state.research.lastSeenDay[d.id] === undefined) w.state.research.lastSeenDay[d.id] = w.day;
   refreshCandidates(w);
