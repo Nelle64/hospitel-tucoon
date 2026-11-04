@@ -1,9 +1,9 @@
 # Acceptance report
 
-_Status date: 2026-11-03 · branch `claude/pixel-hospital` · CI: GitHub Actions run 41698999763 (all steps green)._
+_Status date: 2026-11-04 · `main` @ `1342471` · CI on main: GitHub Actions run 41711703007 (green) · Deploy: run 41793253738 (build, deploy and live verification green)._
 
-## Release status: **EJ LEVERANSKLART** (pending deployment verification)
-All mandatory automated verification passes. The status cannot yet be *TEKNISKT KLART – INVÄNTAR IPHONE-TEST* because the production deployment has not been verified: GitHub Pages must be enabled and the pull request merged by the repository owner, after which the live URL will be checked. The physical iPhone check (`docs/MOBILE_QA.md`) is also outstanding. This report will be updated after those steps.
+## Release status: **TEKNISKT KLART – INVÄNTAR IPHONE-TEST**
+All mandatory automated verification passes and the production build is deployed and verified live at https://nelle64.github.io/hospitel-tucoon/ (deploy run 41793253738, 2026-11-04). The `verify` job of that run, executed on a GitHub-hosted runner after `deploy-pages`, fetched the live URL (HTTP 200, page contains “Pixel Hospital”), `manifest.webmanifest` (`start_url` `./`), `sw.js` (precache list present) and every file listed in `precache-manifest.json`; all succeeded. The 8 `@smoke` browser tests ran on the identical build output in the same run before it was uploaded. The cloud session itself cannot reach `github.io` (its network proxy denies the host), so the live check relies on that runner job. The status is not *FÄRDIGT OCH VERIFIERAT* because the physical iPhone check (`docs/MOBILE_QA.md`) has not been done.
 
 ## Evidence summary (all from actual runs; nothing hand-marked)
 | Area | Result | Evidence |
@@ -47,12 +47,12 @@ All mandatory automated verification passes. The status cannot yet be *TEKNISKT 
 | §19 Mobile UX | portrait layout, gestures, sheets, safe areas, 44 px targets, pause behaviour |
 | §20–21 Art & audio | original generated assets; synthesized sounds, max 8 voices |
 | §22–23 Data contracts & saves | runtime-validated commands/saves, envelope, generations, recovery, export/import, migrations, retention |
-| §24 PWA & GitHub | manifest, SW precache, offline, update flow, CI/CD workflows — **deployment pending owner action** |
+| §24 PWA & GitHub | manifest, SW precache, offline, update flow, CI/CD workflows — deployed to GitHub Pages and verified live (deploy run 41793253738) |
 | §27 Tests | all listed suites implemented and passing |
 | §28 Reporting | all required documents present |
 
 ## Known limitations (honest list)
-1. **Not yet deployed / not verified live.** Requires the owner to enable Pages (“GitHub Actions” source) and merge the PR.
+1. **Live verification is HTTP-level.** The deployed site was checked with HTTP requests from a GitHub runner (HTML, manifest, service worker, all precached files). Browser tests ran on the same build locally in CI, not against the live URL.
 2. **No physical iPhone test yet.** All mobile tests use Chromium with iPhone emulation; Safari/WebKit specifics (audio unlock, Files picker, home-screen install, real notch) are unverified.
 3. **Performance numbers are from headless desktop Chromium** with software rendering, vsync-capped; no iPhone FPS data yet.
 4. **Balance deviations** from the specification's baseline: walking speed 2× faster, satisfaction/success curves, reputation weight, projected-cash crisis, reserve staff, chapter-4 advanced treatments counted per chapter, etc. — each documented with evidence in `docs/BALANCE_REPORT.md`.

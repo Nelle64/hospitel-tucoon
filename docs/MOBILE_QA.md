@@ -24,7 +24,7 @@ Playwright runs the **production build** in Chromium with iPhone touch emulation
 Emulation is not a physical iPhone test. Safari/WebKit specifics (home-screen install prompt, audio unlock behaviour, Files app import/export, real notch) still need the owner's check below.
 
 ## Physical iPhone check (owner, ~10 minutes) – pending
-1. Open **https://nelle64.github.io/hospitel-tucoon/** in Safari (after the Pages deploy is live).
+1. Open **https://nelle64.github.io/hospitel-tucoon/** in Safari (live since deploy run 41793253738).
 2. Tap **Dela** (square with arrow) → **Lägg till på hemskärmen** → **Lägg till**. Open *Pixel Hospital* from the home screen.
 3. Tap **Nytt spel**. Check that the top bar (pengar, rykte, dag/tid) is not hidden behind the notch and the bottom menu is above the home indicator.
 4. Wait for the first patient to walk in through the entrance at the bottom. Tap the patient → a small info card appears. Tap a room → room card.

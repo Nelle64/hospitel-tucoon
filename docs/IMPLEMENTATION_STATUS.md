@@ -1,9 +1,9 @@
 # Implementation status
 
-_Last updated: 2026-11-03 (session 1). Branch `claude/pixel-hospital`._
+_Last updated: 2026-11-04 (session 1). `main` @ `1342471`, deployed._
 
 ## Current phase
-Phase 7 (final acceptance). All phases 0–6 are implemented and their acceptance gates pass in automated tests. Remaining: merge to `main`, enable GitHub Pages, verify the live URL, physical iPhone check by the owner.
+Phase 7 (final acceptance). All phases are implemented, merged to `main` (PR #1) and deployed to GitHub Pages. Release status: **TEKNISKT KLART – INVÄNTAR IPHONE-TEST**. Remaining: physical iPhone check by the owner.
 
 ## Done (verified by automated tests)
 - **Phase 0** – scaffold, strict TS, Vite 8, Phaser 4.2, Vitest 5, Playwright 1.63, ESLint, custom PWA plugin, CI (`.github/workflows/ci.yml`, green on GitHub: run 41698999763), Pages deploy workflow, long-run workflow.
@@ -15,15 +15,15 @@ Phase 7 (final acceptance). All phases 0–6 are implemented and their acceptanc
 - **Phase 6** – IndexedDB generations, verification, crash recovery, migrations, export/import, service worker (offline restart tested), update flow, diagnostics.
 - **Phase 7** – 437 unit/integration tests, campaign tests, 51 e2e tests on 4 viewports, 30-seed × 3-strategy balance, 20 × 1,000-day stress + load case, visual QA screenshots, performance scenarios, reports in `docs/`.
 
+- **Deployment** – PR #1 merged; repository made public and Pages source set to “GitHub Actions” by the owner (Pages is unavailable for private repositories on the free plan, which caused deploy runs 41711703121 and 41712886269 to fail at `configure-pages` with “Not Found”). Deploy run 41793253738: build, smoke tests, deploy and live verification of https://nelle64.github.io/hospitel-tucoon/ all green.
+
 ## Pending
-1. Merge the pull request into `main` (owner action on iPhone, see PR description).
-2. Enable GitHub Pages with source “GitHub Actions” (owner action, see PR description); deploy workflow then publishes; verify the live URL.
-3. Physical iPhone acceptance (`docs/MOBILE_QA.md`).
+1. Physical iPhone acceptance (`docs/MOBILE_QA.md`).
 
 ## Blockers
-- Pages enablement and merging require the repository owner's approval (cannot be done from the session without explicit permission).
+- None for automated work. The physical iPhone check can only be done by the owner.
 
 ## Next executable steps (for any future session)
-1. `git checkout claude/pixel-hospital && npm ci && npm run assets && npm test` to verify the workspace.
-2. After merge + Pages enablement: check `https://nelle64.github.io/hospitel-tucoon/` returns 200 and `sw.js` is served; run `BASE_URL=... npx playwright test --grep @smoke` against it if desired.
+1. `npm ci && npm run assets && npm test` on `main` to verify the workspace.
+2. Every push to `main` redeploys; the `verify` job of `.github/workflows/deploy.yml` checks the live URL (the cloud session's proxy blocks `github.io`, so use that job's log as evidence).
 3. Regenerate reports after any change: `npx vitest run --project unit --project integration --reporter=json --outputFile=reports/vitest.json`, `npx playwright test`, `npx tsx tools/report/acceptance.ts`.
